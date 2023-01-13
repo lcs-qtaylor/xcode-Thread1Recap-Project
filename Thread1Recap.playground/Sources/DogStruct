@@ -1,0 +1,65 @@
+import Foundation
+
+struct Book {
+    let s2 = pow(3, 2)
+    let accelerationDueToGravity = 9.81
+    var widthInMeters: Double
+    var widthInCentimeters:Double {
+        return widthInMeters * 100
+    }
+    var lenghtInMeters: Double
+    var lenghtInCentimeters:Double {
+        return lenghtInMeters * 100
+    }
+    var hightInMeters: Double
+    var hightInCentimeters:Double {
+        return hightInMeters * 100
+    }
+    var weightInKilograms:Double
+    var weightInGrams: Double {
+        return weightInKilograms * 100
+    }
+    var weightInNewtons: Double {
+        return weightInKilograms*9.807
+    }
+    var volumeInMeters: Double {
+        return lenghtInMeters*widthInMeters*hightInMeters
+    }
+    var volumeInCentimeters: Double {
+        return lenghtInCentimeters*widthInCentimeters*hightInCentimeters
+    }
+    
+    var mass: Double {
+        return weightInNewtons/accelerationDueToGravity
+    }
+}
+
+struct Dog {
+    let breed: String
+    let colour: String
+    var age: Int
+    var lenghtInMeters: Double
+    var widthInMeters: Double
+    var HeightInMeters: Double
+    var volume: double
+    var weight: Double
+    var mass: Double
+}
+
+
+
+var dogAtLeft = Dog(breed: "Golden Retreiver",
+                    colour"Dark/Light Golden",
+                    age: 12,
+                    hightInMeters: 0.854)
+dogAtLeft.heightInMeters
+dogAtLeft.heightInCentimeters
+
+var dogAtRight = Dog(breed: "German Shepard",
+                     colour"Black, some brown",
+                     age: 5,
+                     hightInMeters: 0.738)
+
+    dogAtRight.heightInMeters
+    dogAtRight.heightInCentimeters
+
