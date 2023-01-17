@@ -27,6 +27,7 @@ struct DetailView: View {
                             .frame(width: 35)
                         //manaCost
                         Text(cardToShow.manaCost)
+                            .font(Font.custom ("MarkerFelt-Wide", size: 20))
                     }
                     ZStack {
                         Circle()
@@ -99,9 +100,6 @@ struct DetailView: View {
             }
             
         }
-        .navigationTitle(cardToShow.navTitle)
-        .font(Font.custom ("MarkerFelt-Wide", size: 25))
-        
     }
 }
 

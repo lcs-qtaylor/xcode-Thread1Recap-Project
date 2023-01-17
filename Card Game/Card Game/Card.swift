@@ -17,13 +17,13 @@ struct card{
     let creatureType: String
     let description: String
     let rarity: String
-    let navTitle:String
+    
 }
-let leviathon = card(creatureName: "Leviathon", imageName: "Leviathon", health: "3", damage: "5", manaCost: "4", manaType: "watersymbol", creatureType: "Sea Leviathon", description: "THis is a very dangerous beast of the sea.", rarity: "Legendary", navTitle: "Leviathon")
+let leviathon = card(creatureName: "Leviathon", imageName: "Leviathon", health: "3", damage: "5", manaCost: "4", manaType: "watersymbol", creatureType: "Sea Leviathon", description: "THis is a very dangerous beast of the sea.", rarity: "Legendary")
 
-let Beast = card(creatureName: "Forest Giant", imageName: "Monster", health: "6", damage: "4", manaCost: "5", manaType: "watersymbol", creatureType: "Giant", description: "A very big and mean creature, they are hoarders and are very territorial.", rarity:"Epic", navTitle: "Beast")
+let Beast = card(creatureName: "Forest Giant", imageName: "Monster", health: "6", damage: "4", manaCost: "10", manaType: "watersymbol", creatureType: "Giant", description: "A very big and mean creature, they are hoarders and are very territorial.", rarity:"Epic")
 
-let Pheonix = card(creatureName: "Blazed Pheonix", imageName: "Pheonix", health: "7", damage: "9", manaCost:"7", manaType: "Fire", creatureType: "Pheonix", description: "A firey demon seen flying through the deep plains", rarity: "Mythical", navTitle: "Pheonix")
+let Pheonix = card(creatureName: "Blazed Phoenix", imageName: "Phoenix", health: "7", damage: "9", manaCost:"7", manaType: "Fire", creatureType: "Phoenix", description: "A firey demon seen flying through the deep plains", rarity: "Mythical")
 
 //ZStack{
 //    Image("card")
