@@ -13,7 +13,6 @@
 		963E37C1297702C400041136 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37C0297702C400041136 /* Card.swift */; };
 		963E37C3297702DB00041136 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37C2297702DB00041136 /* DetailView.swift */; };
 		963E37C52977033B00041136 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37C42977033B00041136 /* PlayerList.swift */; };
-		963E37C72977154D00041136 /* ListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37C62977154D00041136 /* ListStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		963E37C0297702C400041136 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		963E37C2297702DB00041136 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		963E37C42977033B00041136 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
-		963E37C62977154D00041136 /* ListStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				963E37B22977026800041136 /* Card_GameApp.swift */,
-				963E37C0297702C400041136 /* Card.swift */,
-				963E37C2297702DB00041136 /* DetailView.swift */,
-				963E37C42977033B00041136 /* PlayerList.swift */,
-				963E37C62977154D00041136 /* ListStructure.swift */,
+				963E37CB2977206400041136 /* Model */,
+				963E37C829771F4400041136 /* Views */,
+				963E37C929771F6900041136 /* Structures */,
 				963E37B62977026900041136 /* Assets.xcassets */,
 				963E37B82977026900041136 /* Preview Content */,
 			);
@@ -74,6 +71,30 @@
 				963E37B92977026900041136 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		963E37C829771F4400041136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				963E37C42977033B00041136 /* PlayerList.swift */,
+				963E37C2297702DB00041136 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		963E37C929771F6900041136 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				963E37C0297702C400041136 /* Card.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		963E37CB2977206400041136 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +170,6 @@
 				963E37C52977033B00041136 /* PlayerList.swift in Sources */,
 				963E37B32977026800041136 /* Card_GameApp.swift in Sources */,
 				963E37C3297702DB00041136 /* DetailView.swift in Sources */,
-				963E37C72977154D00041136 /* ListStructure.swift in Sources */,
 				963E37C1297702C400041136 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

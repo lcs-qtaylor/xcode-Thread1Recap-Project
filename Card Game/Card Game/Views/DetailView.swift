@@ -13,7 +13,7 @@ struct DetailView: View {
         ZStack{
             Image("card")
                 .resizable()
-                .frame(width:650,height: 870 )
+                .frame(width:600,height: 700 )
             VStack(spacing: 2){
                 HStack{
                     //Creature Name
@@ -21,40 +21,37 @@ struct DetailView: View {
                         .font(Font.custom ("MarkerFelt-Wide", size: 20))
                         .fontWeight(.bold)
                         .padding()
+                        Spacer()
                     ZStack{
                         Circle()
                             .foregroundColor(.gray)
-                            .frame(width: 35)
+                            .frame(width: 25)
                         //manaCost
                         Text(cardToShow.manaCost)
-                            .font(Font.custom ("MarkerFelt-Wide", size: 20))
+                            .font(Font.custom ("MarkerFelt-Wide", size: 17))
                     }
                     ZStack {
-                        Circle()
-                            .frame(width: 35)
-                            .foregroundColor(.gray)
                         //manaType
                         Image(cardToShow.manaType)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 35, height: 35, alignment: .topLeading)
+                            .frame(width: 25, height: 25, alignment: .topLeading)
+                            .padding(.trailing)
                     }
                     
                 }
                 //imageName
-                .frame(width:350,height: 45)
-                .border(.black,width:3)
+                .frame(width:320,height: 45)
                 Image(cardToShow.imageName)
                     .resizable()
-                    .frame(width:350,height: 350)
-                    .border(.black,width: 3)
+                    .frame(width:320,height: 275)
+                   
                 
                 HStack{
                     
                     // rarity
                     Text(cardToShow.rarity)
-                    // Nothing
                     Text("Creature")
                     Text("-")
                     //creature type
@@ -62,9 +59,8 @@ struct DetailView: View {
                     
                     
                 }
-                .frame(width:350,height: 40)
-                .border(.black,width:3)
-                .font(Font.custom ("MarkerFelt-Wide", size: 20))
+                .frame(width:320,height: 40)
+                .font(Font.custom ("MarkerFelt-Wide", size: 15))
                 .fontWeight(.bold)
                 VStack{
                     // Description
@@ -79,8 +75,7 @@ struct DetailView: View {
                     .padding(.top)
                     Spacer()
                 }
-                .frame(width:350,height: 200)
-                .border(.black,width: 3)
+                .frame(width:320,height: 150)
                 HStack{
                     
                 }
@@ -92,14 +87,15 @@ struct DetailView: View {
                     
                 }
                 
-                .font(Font.custom ("MarkerFelt-Wide", size: 25))
-                .padding(.leading, 265.0)
+                .font(Font.custom ("MarkerFelt-Wide", size: 22))
+                .padding(.leading, 245.0)
                 .fontWeight(.bold)
-                .frame(width:350,height: 55)
+                .frame(width:320,height: 55)
                 
             }
             
         }
+        .navigationTitle(cardToShow.navTitle)
     }
 }
 
