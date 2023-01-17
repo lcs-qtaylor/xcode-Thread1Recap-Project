@@ -151,3 +151,4 @@ struct PlayerList_Previews: PreviewProvider {
 //    }
 //        //.navigationTitle("Leviathon")
 //}
+

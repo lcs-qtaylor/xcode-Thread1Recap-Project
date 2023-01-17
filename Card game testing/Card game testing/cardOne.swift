@@ -1,23 +1,22 @@
 //
-//  DetailView.swift
-//  Card Game ios
+//  cardOne.swift
+//  Card game testing
 //
-//  Created by Quin Taylor on 2023-01-13.
+//  Created by Quin Taylor on 2023-01-16.
 //
 
 import SwiftUI
 
-struct DetailView: View {
-    let cardToShow: card
+struct cardOne: View {
     var body: some View {
         ZStack{
             Image("card")
                 .resizable()
                 .frame(width:650,height: 870 )
-            VStack(spacing: 2){
+            VStack(spacing: 1){
                 HStack{
                     //Creature Name
-                    Text(cardToShow.creatureName)
+                    Text("Evil Sea Monster")
                         .font(Font.custom ("MarkerFelt-Wide", size: 20))
                         .fontWeight(.bold)
                         .padding()
@@ -26,14 +25,14 @@ struct DetailView: View {
                             .foregroundColor(.gray)
                             .frame(width: 35)
                         //manaCost
-                        Text(cardToShow.manaCost)
+                        Text("3")
                     }
                     ZStack {
                         Circle()
                             .frame(width: 35)
                             .foregroundColor(.gray)
-                        //manaType
-                        Image(cardToShow.manaType)
+                        
+                        Image("Fire")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .aspectRatio(contentMode: .fill)
@@ -41,10 +40,9 @@ struct DetailView: View {
                     }
                     
                 }
-                //imageName
                 .frame(width:350,height: 45)
                 .border(.black,width:3)
-                Image(cardToShow.imageName)
+                Image("Monster")
                     .resizable()
                     .frame(width:350,height: 350)
                     .border(.black,width: 3)
@@ -52,12 +50,12 @@ struct DetailView: View {
                 HStack{
                     
                     // rarity
-                    Text(cardToShow.rarity)
+                    Text("Legendary")
                     // Nothing
                     Text("Creature")
                     Text("-")
                     //creature type
-                    Text(cardToShow.creatureType)
+                    Text("Leviathon")
                     
                     
                 }
@@ -67,48 +65,38 @@ struct DetailView: View {
                 .fontWeight(.bold)
                 VStack{
                     // Description
-                    HStack{
-                        Text(cardToShow.description)
-                            .font(Font.custom ("MarkerFelt-Wide", size: 15))
-                            .fontWeight(.bold)
-                            .padding(.leading)
-                        Spacer()
-                        
-                    }
-                    .padding(.top)
-                    Spacer()
+                    Text("this is a deadly creature")
+                        .font(Font.custom ("MarkerFelt-Wide", size: 15))
+                        .fontWeight(.bold)
+                 
                 }
-                .frame(width:350,height: 200)
+                .frame(width:350,height: 220)
                 .border(.black,width: 3)
                 HStack{
                     
                 }
-                //health and damage
                 HStack{
-                    Text(cardToShow.health)
+                    Text("5")
                     Text("/")
-                    Text(cardToShow.damage)
-                    
+                    Text("4")
+                       
                 }
-                
+               
                 .font(Font.custom ("MarkerFelt-Wide", size: 25))
                 .padding(.leading, 265.0)
                 .fontWeight(.bold)
-                .frame(width:350,height: 55)
-                
+                .frame(width:350,height: 50)
+                .border(.black,width: 3)
             }
             
         }
-        .navigationTitle(cardToShow.navTitle)
-        .font(Font.custom ("MarkerFelt-Wide", size: 25))
-        
+       
     }
+   
 }
 
-struct DetailView_Previews: PreviewProvider{
+struct cardOne_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-            DetailView(cardToShow: leviathon)
-        }
+        cardOne()
     }
 }
