@@ -7,36 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		963E37CD2977230F00041136 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37CC2977230F00041136 /* TaskCell.swift */; };
-		963E37CF2977232E00041136 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37CE2977232E00041136 /* AddTask.swift */; };
-		963E37D12977234E00041136 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37D02977234E00041136 /* Task.swift */; };
-		963E37D32977236700041136 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37D22977236700041136 /* TaskStore.swift */; };
-		963E37D52977237C00041136 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37D42977237C00041136 /* TaskPriority.swift */; };
-		969836DA2971EBEA00E0150C /* Card_Game_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969836D92971EBEA00E0150C /* Card_Game_iosApp.swift */; };
-		969836DE2971EBEC00E0150C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969836DD2971EBEC00E0150C /* Assets.xcassets */; };
-		969836E12971EBED00E0150C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969836E02971EBED00E0150C /* Preview Assets.xcassets */; };
-		969836EA2971EC1700E0150C /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969836E92971EC1700E0150C /* PlayerList.swift */; };
-		969836F62971EE6800E0150C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969836F52971EE6800E0150C /* DetailView.swift */; };
-		96C66F302976ED6E00C59457 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C66F2F2976ED6E00C59457 /* Card.swift */; };
+		963E37E32979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37E22979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift */; };
+		963E37E72979A19000041136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E37E62979A19000041136 /* Assets.xcassets */; };
+		963E37EA2979A19000041136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E37E92979A19000041136 /* Preview Assets.xcassets */; };
+		963E37F62979A40800041136 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37F52979A40800041136 /* RectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		963E37CC2977230F00041136 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
-		963E37CE2977232E00041136 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
-		963E37D02977234E00041136 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		963E37D22977236700041136 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
-		963E37D42977237C00041136 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
-		969836D62971EBEA00E0150C /* Card Game ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Game ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		969836D92971EBEA00E0150C /* Card_Game_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_Game_iosApp.swift; sourceTree = "<group>"; };
-		969836DD2971EBEC00E0150C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		969836E02971EBED00E0150C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		969836E92971EC1700E0150C /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
-		969836F52971EE6800E0150C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		96C66F2F2976ED6E00C59457 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		963E37DF2979A18D00041136 /* AreaAndPerimeterCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreaAndPerimeterCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		963E37E22979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAndPerimeterCalculatorApp.swift; sourceTree = "<group>"; };
+		963E37E62979A19000041136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		963E37E92979A19000041136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		963E37F52979A40800041136 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		969836D32971EBEA00E0150C /* Frameworks */ = {
+		963E37DC2979A18D00041136 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,84 +32,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		969836CD2971EBEA00E0150C = {
+		963E37D62979A18D00041136 = {
 			isa = PBXGroup;
 			children = (
-				969836D82971EBEA00E0150C /* Card Game ios */,
-				969836D72971EBEA00E0150C /* Products */,
+				963E37E12979A18D00041136 /* AreaAndPerimeterCalculator */,
+				963E37E02979A18D00041136 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		969836D72971EBEA00E0150C /* Products */ = {
+		963E37E02979A18D00041136 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				969836D62971EBEA00E0150C /* Card Game ios.app */,
+				963E37DF2979A18D00041136 /* AreaAndPerimeterCalculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		969836D82971EBEA00E0150C /* Card Game ios */ = {
+		963E37E12979A18D00041136 /* AreaAndPerimeterCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				969836D92971EBEA00E0150C /* Card_Game_iosApp.swift */,
-				96C66F2F2976ED6E00C59457 /* Card.swift */,
-				969836F52971EE6800E0150C /* DetailView.swift */,
-				969836E92971EC1700E0150C /* PlayerList.swift */,
-				963E37CC2977230F00041136 /* TaskCell.swift */,
-				963E37CE2977232E00041136 /* AddTask.swift */,
-				963E37D02977234E00041136 /* Task.swift */,
-				963E37D22977236700041136 /* TaskStore.swift */,
-				963E37D42977237C00041136 /* TaskPriority.swift */,
-				969836DD2971EBEC00E0150C /* Assets.xcassets */,
-				969836DF2971EBED00E0150C /* Preview Content */,
+				963E37E22979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift */,
+				963E37F42979A3E200041136 /* Views */,
+				963E37E62979A19000041136 /* Assets.xcassets */,
+				963E37E82979A19000041136 /* Preview Content */,
 			);
-			path = "Card Game ios";
+			path = AreaAndPerimeterCalculator;
 			sourceTree = "<group>";
 		};
-		969836DF2971EBED00E0150C /* Preview Content */ = {
+		963E37E82979A19000041136 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				969836E02971EBED00E0150C /* Preview Assets.xcassets */,
+				963E37E92979A19000041136 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		963E37F42979A3E200041136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				963E37F52979A40800041136 /* RectangleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		969836D52971EBEA00E0150C /* Card Game ios */ = {
+		963E37DE2979A18D00041136 /* AreaAndPerimeterCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 969836E42971EBED00E0150C /* Build configuration list for PBXNativeTarget "Card Game ios" */;
+			buildConfigurationList = 963E37ED2979A19000041136 /* Build configuration list for PBXNativeTarget "AreaAndPerimeterCalculator" */;
 			buildPhases = (
-				969836D22971EBEA00E0150C /* Sources */,
-				969836D32971EBEA00E0150C /* Frameworks */,
-				969836D42971EBEA00E0150C /* Resources */,
+				963E37DB2979A18D00041136 /* Sources */,
+				963E37DC2979A18D00041136 /* Frameworks */,
+				963E37DD2979A18D00041136 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Card Game ios";
-			productName = "Card Game ios";
-			productReference = 969836D62971EBEA00E0150C /* Card Game ios.app */;
+			name = AreaAndPerimeterCalculator;
+			productName = AreaAndPerimeterCalculator;
+			productReference = 963E37DF2979A18D00041136 /* AreaAndPerimeterCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		969836CE2971EBEA00E0150C /* Project object */ = {
+		963E37D72979A18D00041136 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					969836D52971EBEA00E0150C = {
+					963E37DE2979A18D00041136 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 969836D12971EBEA00E0150C /* Build configuration list for PBXProject "Card Game ios" */;
+			buildConfigurationList = 963E37DA2979A18D00041136 /* Build configuration list for PBXProject "AreaAndPerimeterCalculator" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,49 +118,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 969836CD2971EBEA00E0150C;
-			productRefGroup = 969836D72971EBEA00E0150C /* Products */;
+			mainGroup = 963E37D62979A18D00041136;
+			productRefGroup = 963E37E02979A18D00041136 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				969836D52971EBEA00E0150C /* Card Game ios */,
+				963E37DE2979A18D00041136 /* AreaAndPerimeterCalculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		969836D42971EBEA00E0150C /* Resources */ = {
+		963E37DD2979A18D00041136 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				969836E12971EBED00E0150C /* Preview Assets.xcassets in Resources */,
-				969836DE2971EBEC00E0150C /* Assets.xcassets in Resources */,
+				963E37EA2979A19000041136 /* Preview Assets.xcassets in Resources */,
+				963E37E72979A19000041136 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		969836D22971EBEA00E0150C /* Sources */ = {
+		963E37DB2979A18D00041136 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				969836F62971EE6800E0150C /* DetailView.swift in Sources */,
-				963E37D52977237C00041136 /* TaskPriority.swift in Sources */,
-				969836EA2971EC1700E0150C /* PlayerList.swift in Sources */,
-				963E37D32977236700041136 /* TaskStore.swift in Sources */,
-				963E37CF2977232E00041136 /* AddTask.swift in Sources */,
-				969836DA2971EBEA00E0150C /* Card_Game_iosApp.swift in Sources */,
-				96C66F302976ED6E00C59457 /* Card.swift in Sources */,
-				963E37D12977234E00041136 /* Task.swift in Sources */,
-				963E37CD2977230F00041136 /* TaskCell.swift in Sources */,
+				963E37E32979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift in Sources */,
+				963E37F62979A40800041136 /* RectangleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		969836E22971EBED00E0150C /* Debug */ = {
+		963E37EB2979A19000041136 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -233,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		969836E32971EBED00E0150C /* Release */ = {
+		963E37EC2979A19000041136 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -287,14 +267,14 @@
 			};
 			name = Release;
 		};
-		969836E52971EBED00E0150C /* Debug */ = {
+		963E37EE2979A19000041136 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Card Game ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AreaAndPerimeterCalculator/Preview Content\"";
 				DEVELOPMENT_TEAM = 8U55N8U7SR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -308,7 +288,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.quinlantaylor.Card-Game-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.quinlantaylor.AreaAndPerimeterCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,14 +296,14 @@
 			};
 			name = Debug;
 		};
-		969836E62971EBED00E0150C /* Release */ = {
+		963E37EF2979A19000041136 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Card Game ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AreaAndPerimeterCalculator/Preview Content\"";
 				DEVELOPMENT_TEAM = 8U55N8U7SR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -337,7 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.quinlantaylor.Card-Game-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.quinlantaylor.AreaAndPerimeterCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -348,25 +328,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		969836D12971EBEA00E0150C /* Build configuration list for PBXProject "Card Game ios" */ = {
+		963E37DA2979A18D00041136 /* Build configuration list for PBXProject "AreaAndPerimeterCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				969836E22971EBED00E0150C /* Debug */,
-				969836E32971EBED00E0150C /* Release */,
+				963E37EB2979A19000041136 /* Debug */,
+				963E37EC2979A19000041136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		969836E42971EBED00E0150C /* Build configuration list for PBXNativeTarget "Card Game ios" */ = {
+		963E37ED2979A19000041136 /* Build configuration list for PBXNativeTarget "AreaAndPerimeterCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				969836E52971EBED00E0150C /* Debug */,
-				969836E62971EBED00E0150C /* Release */,
+				963E37EE2979A19000041136 /* Debug */,
+				963E37EF2979A19000041136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 969836CE2971EBEA00E0150C /* Project object */;
+	rootObject = 963E37D72979A18D00041136 /* Project object */;
 }

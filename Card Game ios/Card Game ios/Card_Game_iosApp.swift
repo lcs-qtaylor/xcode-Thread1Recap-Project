@@ -1,19 +1,22 @@
 //
-//  Card_Game_iosApp.swift
-//  Card Game ios
+//  Card_GameApp.swift
+//  Card Game
 //
-//  Created by Quin Taylor on 2023-01-13.
+//  Created by Quin Taylor on 2023-01-17.
 //
 
 import SwiftUI
 
 @main
-struct Card_Game_iosApp: App {
+struct Card_GameiosApp: App {
+    @StateObject private var store = TaskStore(tasks: testData)
     var body: some Scene {
         WindowGroup {
-//            NavigationView {
-            PlayerList()
-//            }
+           NavigationView {
+               PlayerList(store: store)
+           }
         }
     }
 }
+
+
