@@ -8,43 +8,65 @@
 import SwiftUI
 
 struct RectangleView: View {
-    let length: Double = 7
-    let width: Double = 5
+   @State var length: Double = 7
+   @State var width: Double = 5
     
     var area: Double {
-        return 
+        return length * width
     
 }
+    //expressing the user interface
     var body: some View {
         VStack(spacing: 15){
             HStack{
                 Image("Rectangle")
                     .resizable()
                     .scaledToFit()
-                    .frame(width:380)
+                    .frame(width:380,height:150)
                     
-                Spacer()
                 
             }
             Text("Length")
                 .font(.title2)
                 .bold()
+            //create Slider to change value of length and Width
+            Slider(value: .constant(50.0),
+                   in: 0.0...100.0,
+                   label: {
+                        Text("Opacity")
+            },
+                   minimumValueLabel: {
+                        Text("0")
+            },
+                   maximumValueLabel: {
+                        Text("100")
+            })
             // use String interpulation to convert the Double data type to text (String)
             
             // \(variable)
-            Text("\(Length)")
+            Text("\(length)")
             
             Text("width")
                 .font(.title2)
                 .bold()
-            
-            Text("5.0")
+            Slider(value: .constant(50.0),
+                   in: 0.0...100.0,
+                   label: {
+                        Text("Opacity")
+            },
+                   minimumValueLabel: {
+                        Text("0")
+            },
+                   maximumValueLabel: {
+                        Text("100")
+            })
+            Text("\(width)")
             
             Text("Area")
                 .font(.title2)
                 .bold()
             
-            Text("21.0")
+            Text("\(area)")
            
             Spacer()
             
