@@ -23,16 +23,23 @@ struct AreaAndPerimeterCalculatorApp: App {
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(1)
                 
-                TempConvert()
+                TempConvertC()
                     .tabItem {
-                        Image(systemName: "Degrees" )
+                        Image(systemName: "f.circle.fill" )
                     }
                     .toolbar(.visible, for: .tabBar)
                 
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(2)
                 
+                TempConvertF()
+                    .tabItem {
+                        Image(systemName: "c.circle.fill" )
+                    }
+                    .toolbar(.visible, for: .tabBar)
                 
+                    .toolbarBackground( Color.black, for: .tabBar)
+                    .tag(3)
             }
             
         }

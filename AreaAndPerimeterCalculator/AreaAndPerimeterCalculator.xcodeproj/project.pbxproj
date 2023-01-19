@@ -11,7 +11,8 @@
 		963E37E72979A19000041136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E37E62979A19000041136 /* Assets.xcassets */; };
 		963E37EA2979A19000041136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E37E92979A19000041136 /* Preview Assets.xcassets */; };
 		963E37F62979A40800041136 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37F52979A40800041136 /* RectangleView.swift */; };
-		963E37F82979AB9800041136 /* TempConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37F72979AB9800041136 /* TempConvert.swift */; };
+		963E37F82979AB9800041136 /* TempConvertC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37F72979AB9800041136 /* TempConvertC.swift */; };
+		968D33292979CB75007A9CA5 /* TempConvertF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D33282979CB75007A9CA5 /* TempConvertF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +21,8 @@
 		963E37E62979A19000041136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963E37E92979A19000041136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		963E37F52979A40800041136 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
-		963E37F72979AB9800041136 /* TempConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConvert.swift; sourceTree = "<group>"; };
+		963E37F72979AB9800041136 /* TempConvertC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConvertC.swift; sourceTree = "<group>"; };
+		968D33282979CB75007A9CA5 /* TempConvertF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConvertF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				963E37F52979A40800041136 /* RectangleView.swift */,
-				963E37F72979AB9800041136 /* TempConvert.swift */,
+				963E37F72979AB9800041136 /* TempConvertC.swift */,
+				968D33282979CB75007A9CA5 /* TempConvertF.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,7 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				963E37E32979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift in Sources */,
-				963E37F82979AB9800041136 /* TempConvert.swift in Sources */,
+				963E37F82979AB9800041136 /* TempConvertC.swift in Sources */,
+				968D33292979CB75007A9CA5 /* TempConvertF.swift in Sources */,
 				963E37F62979A40800041136 /* RectangleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +291,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
