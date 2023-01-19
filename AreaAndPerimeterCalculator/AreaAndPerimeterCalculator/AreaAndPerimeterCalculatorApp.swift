@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+
 struct AreaAndPerimeterCalculatorApp: App {
     var body: some Scene {
         WindowGroup {
@@ -15,12 +16,22 @@ struct AreaAndPerimeterCalculatorApp: App {
                 
                 RectangleView()
                     .tabItem {
-                        Image(systemName: "map" )
+                        Image(systemName: "rectangle" )
                     }
                     .toolbar(.visible, for: .tabBar)
                 
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(1)
+                
+                TempConvert()
+                    .tabItem {
+                        Image(systemName: "Degrees" )
+                    }
+                    .toolbar(.visible, for: .tabBar)
+                
+                    .toolbarBackground( Color.black, for: .tabBar)
+                    .tag(2)
+                
                 
             }
             
