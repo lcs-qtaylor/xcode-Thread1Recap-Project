@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct AreaAndPerimeterCalculatorApp: App {
     var body: some Scene {
-        
         WindowGroup {
             TabView{
                 
@@ -22,27 +21,6 @@ struct AreaAndPerimeterCalculatorApp: App {
                 
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(1)
-                
-                ContentView()
-                    .tabItem {
-                        Image(systemName: "bubble.right")
-                    }
-                
-                    .toolbar(.visible, for: .tabBar)
-                
-                    .toolbarBackground( Color.black, for: .tabBar)
-                
-                    .tag(2)
-                
-                
-                CalculatePerimeter()
-                    .tabItem {
-                        Image(systemName: "camera" )
-                    }
-                    .toolbar(.visible, for: .tabBar)
-                
-                    .toolbarBackground( Color.black, for: .tabBar)
-                    .tag(3)
                 
             }
             
