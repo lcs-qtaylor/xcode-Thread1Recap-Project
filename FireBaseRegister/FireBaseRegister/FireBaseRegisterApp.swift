@@ -1,30 +1,30 @@
 //
-//  FireBaseRegisterApp.swift
-//  FireBaseRegister
+//  DevSwiftUIApp.swift
+//  DevSwiftUI
 //
-//  Created by Quin Taylor on 2023-01-20.
+//  Created by Cairocoders
 //
-
+ 
 import SwiftUI
-import FirebaseCore
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
-}
+import Firebase
+ 
 @main
 struct FireBaseRegisterApp: App {
-    // register app delegate for Firebase setup
-     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+        
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+       
     var body: some Scene {
         WindowGroup {
-            NavigationView{
-                ContentView()
-            }
+            ContentView()
         }
+    }
+}
+   
+class AppDelegate: NSObject,UIApplicationDelegate{
+         
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+             
+        FirebaseApp.configure()
+        return true
     }
 }
