@@ -7,28 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		963E37E32979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37E22979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift */; };
-		963E37E72979A19000041136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E37E62979A19000041136 /* Assets.xcassets */; };
-		963E37EA2979A19000041136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E37E92979A19000041136 /* Preview Assets.xcassets */; };
-		963E37F62979A40800041136 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37F52979A40800041136 /* RectangleView.swift */; };
-		963E37F82979AB9800041136 /* TempConvertC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E37F72979AB9800041136 /* TempConvertC.swift */; };
-		968D33292979CB75007A9CA5 /* TempConvertF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D33282979CB75007A9CA5 /* TempConvertF.swift */; };
-		96E8EC60297B24B6008B82D0 /* CylinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8EC5F297B24B6008B82D0 /* CylinderView.swift */; };
+		96A354EC297AFEA1002D9399 /* ChatViewTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A354EB297AFEA1002D9399 /* ChatViewTestApp.swift */; };
+		96A354EE297AFEA1002D9399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A354ED297AFEA1002D9399 /* ContentView.swift */; };
+		96A354F0297AFEA4002D9399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A354EF297AFEA4002D9399 /* Assets.xcassets */; };
+		96A354F3297AFEA4002D9399 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A354F2297AFEA4002D9399 /* Preview Assets.xcassets */; };
+		96A354FA297AFF63002D9399 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A354F9297AFF63002D9399 /* MessageManager.swift */; };
+		96A354FC297AFF84002D9399 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A354FB297AFF84002D9399 /* Extensions.swift */; };
+		96A354FE297AFFAE002D9399 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A354FD297AFFAE002D9399 /* Message.swift */; };
+		96A35500297AFFDC002D9399 /* TitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A354FF297AFFDC002D9399 /* TitleRow.swift */; };
+		96A35502297AFFFF002D9399 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A35501297AFFFF002D9399 /* MessageBubble.swift */; };
+		96A35504297B001A002D9399 /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A35503297B001A002D9399 /* MessageField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		963E37DF2979A18D00041136 /* AreaAndPerimeterCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreaAndPerimeterCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		963E37E22979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAndPerimeterCalculatorApp.swift; sourceTree = "<group>"; };
-		963E37E62979A19000041136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		963E37E92979A19000041136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		963E37F52979A40800041136 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
-		963E37F72979AB9800041136 /* TempConvertC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConvertC.swift; sourceTree = "<group>"; };
-		968D33282979CB75007A9CA5 /* TempConvertF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConvertF.swift; sourceTree = "<group>"; };
-		96E8EC5F297B24B6008B82D0 /* CylinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderView.swift; sourceTree = "<group>"; };
+		96A354E8297AFEA1002D9399 /* ChatViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A354EB297AFEA1002D9399 /* ChatViewTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewTestApp.swift; sourceTree = "<group>"; };
+		96A354ED297AFEA1002D9399 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96A354EF297AFEA4002D9399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96A354F2297AFEA4002D9399 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96A354F9297AFF63002D9399 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		96A354FB297AFF84002D9399 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		96A354FD297AFFAE002D9399 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		96A354FF297AFFDC002D9399 /* TitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRow.swift; sourceTree = "<group>"; };
+		96A35501297AFFFF002D9399 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		96A35503297B001A002D9399 /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		963E37DC2979A18D00041136 /* Frameworks */ = {
+		96A354E5297AFEA1002D9399 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,88 +44,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		963E37D62979A18D00041136 = {
+		96A354DF297AFEA1002D9399 = {
 			isa = PBXGroup;
 			children = (
-				963E37E12979A18D00041136 /* AreaAndPerimeterCalculator */,
-				963E37E02979A18D00041136 /* Products */,
+				96A354EA297AFEA1002D9399 /* ChatViewTest */,
+				96A354E9297AFEA1002D9399 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		963E37E02979A18D00041136 /* Products */ = {
+		96A354E9297AFEA1002D9399 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				963E37DF2979A18D00041136 /* AreaAndPerimeterCalculator.app */,
+				96A354E8297AFEA1002D9399 /* ChatViewTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		963E37E12979A18D00041136 /* AreaAndPerimeterCalculator */ = {
+		96A354EA297AFEA1002D9399 /* ChatViewTest */ = {
 			isa = PBXGroup;
 			children = (
-				963E37E22979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift */,
-				963E37F42979A3E200041136 /* Views */,
-				963E37E62979A19000041136 /* Assets.xcassets */,
-				963E37E82979A19000041136 /* Preview Content */,
+				96A354EB297AFEA1002D9399 /* ChatViewTestApp.swift */,
+				96A354ED297AFEA1002D9399 /* ContentView.swift */,
+				96A354FB297AFF84002D9399 /* Extensions.swift */,
+				96A354F9297AFF63002D9399 /* MessageManager.swift */,
+				96A354FD297AFFAE002D9399 /* Message.swift */,
+				96A354FF297AFFDC002D9399 /* TitleRow.swift */,
+				96A35501297AFFFF002D9399 /* MessageBubble.swift */,
+				96A35503297B001A002D9399 /* MessageField.swift */,
+				96A354EF297AFEA4002D9399 /* Assets.xcassets */,
+				96A354F1297AFEA4002D9399 /* Preview Content */,
 			);
-			path = AreaAndPerimeterCalculator;
+			path = ChatViewTest;
 			sourceTree = "<group>";
 		};
-		963E37E82979A19000041136 /* Preview Content */ = {
+		96A354F1297AFEA4002D9399 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				963E37E92979A19000041136 /* Preview Assets.xcassets */,
+				96A354F2297AFEA4002D9399 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		963E37F42979A3E200041136 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				963E37F52979A40800041136 /* RectangleView.swift */,
-				96E8EC5F297B24B6008B82D0 /* CylinderView.swift */,
-				963E37F72979AB9800041136 /* TempConvertC.swift */,
-				968D33282979CB75007A9CA5 /* TempConvertF.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		963E37DE2979A18D00041136 /* AreaAndPerimeterCalculator */ = {
+		96A354E7297AFEA1002D9399 /* ChatViewTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 963E37ED2979A19000041136 /* Build configuration list for PBXNativeTarget "AreaAndPerimeterCalculator" */;
+			buildConfigurationList = 96A354F6297AFEA4002D9399 /* Build configuration list for PBXNativeTarget "ChatViewTest" */;
 			buildPhases = (
-				963E37DB2979A18D00041136 /* Sources */,
-				963E37DC2979A18D00041136 /* Frameworks */,
-				963E37DD2979A18D00041136 /* Resources */,
+				96A354E4297AFEA1002D9399 /* Sources */,
+				96A354E5297AFEA1002D9399 /* Frameworks */,
+				96A354E6297AFEA1002D9399 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AreaAndPerimeterCalculator;
-			productName = AreaAndPerimeterCalculator;
-			productReference = 963E37DF2979A18D00041136 /* AreaAndPerimeterCalculator.app */;
+			name = ChatViewTest;
+			productName = ChatViewTest;
+			productReference = 96A354E8297AFEA1002D9399 /* ChatViewTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		963E37D72979A18D00041136 /* Project object */ = {
+		96A354E0297AFEA1002D9399 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					963E37DE2979A18D00041136 = {
+					96A354E7297AFEA1002D9399 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 963E37DA2979A18D00041136 /* Build configuration list for PBXProject "AreaAndPerimeterCalculator" */;
+			buildConfigurationList = 96A354E3297AFEA1002D9399 /* Build configuration list for PBXProject "ChatViewTest" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,45 +128,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 963E37D62979A18D00041136;
-			productRefGroup = 963E37E02979A18D00041136 /* Products */;
+			mainGroup = 96A354DF297AFEA1002D9399;
+			productRefGroup = 96A354E9297AFEA1002D9399 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				963E37DE2979A18D00041136 /* AreaAndPerimeterCalculator */,
+				96A354E7297AFEA1002D9399 /* ChatViewTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		963E37DD2979A18D00041136 /* Resources */ = {
+		96A354E6297AFEA1002D9399 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				963E37EA2979A19000041136 /* Preview Assets.xcassets in Resources */,
-				963E37E72979A19000041136 /* Assets.xcassets in Resources */,
+				96A354F3297AFEA4002D9399 /* Preview Assets.xcassets in Resources */,
+				96A354F0297AFEA4002D9399 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		963E37DB2979A18D00041136 /* Sources */ = {
+		96A354E4297AFEA1002D9399 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				963E37E32979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift in Sources */,
-				96E8EC60297B24B6008B82D0 /* CylinderView.swift in Sources */,
-				963E37F82979AB9800041136 /* TempConvertC.swift in Sources */,
-				968D33292979CB75007A9CA5 /* TempConvertF.swift in Sources */,
-				963E37F62979A40800041136 /* RectangleView.swift in Sources */,
+				96A354FA297AFF63002D9399 /* MessageManager.swift in Sources */,
+				96A354EE297AFEA1002D9399 /* ContentView.swift in Sources */,
+				96A354FE297AFFAE002D9399 /* Message.swift in Sources */,
+				96A35502297AFFFF002D9399 /* MessageBubble.swift in Sources */,
+				96A354EC297AFEA1002D9399 /* ChatViewTestApp.swift in Sources */,
+				96A354FC297AFF84002D9399 /* Extensions.swift in Sources */,
+				96A35504297B001A002D9399 /* MessageField.swift in Sources */,
+				96A35500297AFFDC002D9399 /* TitleRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		963E37EB2979A19000041136 /* Debug */ = {
+		96A354F4297AFEA4002D9399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -225,7 +229,7 @@
 			};
 			name = Debug;
 		};
-		963E37EC2979A19000041136 /* Release */ = {
+		96A354F5297AFEA4002D9399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,14 +283,14 @@
 			};
 			name = Release;
 		};
-		963E37EE2979A19000041136 /* Debug */ = {
+		96A354F7297AFEA4002D9399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AreaAndPerimeterCalculator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChatViewTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 8U55N8U7SR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,13 +299,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.quinlantaylor.AreaAndPerimeterCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.quinlantaylor.ChatViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,14 +312,14 @@
 			};
 			name = Debug;
 		};
-		963E37EF2979A19000041136 /* Release */ = {
+		96A354F8297AFEA4002D9399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AreaAndPerimeterCalculator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChatViewTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 8U55N8U7SR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -325,13 +328,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.quinlantaylor.AreaAndPerimeterCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.quinlantaylor.ChatViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,25 +344,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		963E37DA2979A18D00041136 /* Build configuration list for PBXProject "AreaAndPerimeterCalculator" */ = {
+		96A354E3297AFEA1002D9399 /* Build configuration list for PBXProject "ChatViewTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				963E37EB2979A19000041136 /* Debug */,
-				963E37EC2979A19000041136 /* Release */,
+				96A354F4297AFEA4002D9399 /* Debug */,
+				96A354F5297AFEA4002D9399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		963E37ED2979A19000041136 /* Build configuration list for PBXNativeTarget "AreaAndPerimeterCalculator" */ = {
+		96A354F6297AFEA4002D9399 /* Build configuration list for PBXNativeTarget "ChatViewTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				963E37EE2979A19000041136 /* Debug */,
-				963E37EF2979A19000041136 /* Release */,
+				96A354F7297AFEA4002D9399 /* Debug */,
+				96A354F8297AFEA4002D9399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 963E37D72979A18D00041136 /* Project object */;
+	rootObject = 96A354E0297AFEA1002D9399 /* Project object */;
 }

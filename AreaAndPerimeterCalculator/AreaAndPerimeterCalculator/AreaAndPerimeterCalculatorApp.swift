@@ -17,29 +17,41 @@ struct AreaAndPerimeterCalculatorApp: App {
                 RectangleView()
                     .tabItem {
                         Image(systemName: "rectangle" )
+                        Text("Rectangle")
                     }
                     .toolbar(.visible, for: .tabBar)
                 
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(1)
                 
-                TempConvertC()
+                CylinderView()
                     .tabItem {
-                        Image(systemName: "f.circle.fill" )
+                        Image(systemName: "circle.fill" )
+                        Text("Cylinder")
                     }
                     .toolbar(.visible, for: .tabBar)
                 
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(2)
-                
-                TempConvertF()
+                TempConvertC()
                     .tabItem {
-                        Image(systemName: "c.circle.fill" )
+                        Image(systemName: "f.circle.fill" )
+                        Text("F to C")
                     }
                     .toolbar(.visible, for: .tabBar)
                 
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(3)
+                
+                TempConvertF()
+                    .tabItem {
+                        Image(systemName: "c.circle.fill" )
+                        Text("C to F")
+                    }
+                    .toolbar(.visible, for: .tabBar)
+                
+                    .toolbarBackground( Color.black, for: .tabBar)
+                    .tag(4)
             }
             
         }
