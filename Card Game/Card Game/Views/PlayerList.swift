@@ -9,59 +9,21 @@ import SwiftUI
 
 struct PlayerList: View {
     var body: some View {
-            List{
+            List(allCards){ currentCard in
                 
                 NavigationLink(destination:{
-                    DetailView(cardToShow: leviathon)
+                    DetailView(cardToShow: currentCard)
                 }, label: {
-                    Image("Leviathon")
+                    Image(currentCard.imageName)
                         .resizable()
                         .scaledToFill()
                         .frame (width: 50, height: 50, alignment:
                                 .center)
                         .clipped()
                         .border(.black,width: 2)
-                    
+
                     VStack(spacing: 1) {
-                        Text("Leviathon")
-                            .fontWeight(.black)
-                            .font(Font.custom ("MarkerFelt-Wide", size: 35))
-                        Text(".")
-                            .font(Font.custom("largeTitle", size: 10))
-                    }
-                })
-                NavigationLink(destination:{
-                    DetailView(cardToShow: Beast)
-                }, label: {
-                    Image("Monster")
-                        .resizable()
-                        .scaledToFill()
-                        .frame (width: 50, height: 50, alignment:
-                                .center)
-                        .clipped()
-                        .border(.black,width: 2)
-                    
-                    VStack(spacing: 1) {
-                        Text("Forest Giant")
-                            .fontWeight(.black)
-                            .font(Font.custom ("MarkerFelt-Wide", size: 35))
-                        Text(".")
-                            .font(Font.custom("largeTitle", size: 10))
-                    }
-                })
-                NavigationLink(destination:{
-                    DetailView(cardToShow: Pheonix)
-                }, label: {
-                    Image("Phoenix")
-                        .resizable()
-                        .scaledToFill()
-                        .frame (width: 50, height: 50, alignment:
-                                .center)
-                        .clipped()
-                        .border(.black,width: 2)
-                    
-                    VStack(spacing: 1) {
-                        Text("Blazed Phoenix")
+                        Text(currentCard.creatureName)
                             .fontWeight(.black)
                             .font(Font.custom ("MarkerFelt-Wide", size: 35))
                         Text(".")

@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  DevSwiftUI
-//
-//  Created by Cairocoders
-//
+
 
 import SwiftUI
 import Firebase
@@ -26,22 +21,17 @@ struct ContentView: View {
                 
                 VStack(spacing: 16) {
                     Picker(selection: $isLoginMode, label: Text("Picker here")) {
-                        Text("Login")
-                            .tag(true)
-                        Text("Create Account")
-                            .tag(false)
-                    }.pickerStyle(SegmentedPickerStyle())
-                    
+                            Text("Login")
+                                .tag(true)
+                            Text("Create Account")
+                                .tag(false)
+                        }.pickerStyle(SegmentedPickerStyle())
                     if !isLoginMode {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "person.fill")
+                        Image(systemName: "person.fill")
                                 .font(.system(size: 64))
                                 .padding()
-                        }
                     }
-                    
+
                     Group {
                         TextField("Email", text: $email)
                             .keyboardType(.emailAddress)
@@ -86,9 +76,6 @@ struct ContentView: View {
         }
     }
     
-    
-    
-    
     private func loginUser() {
         Auth.auth().signIn(withEmail: email, password: password) { result, err in
             if let err = err
@@ -120,8 +107,7 @@ struct ContentView: View {
             print("Successfully created user: \(result?.user.uid ?? "")")
             
             self.loginStatusMessage = "Successfully created user: \(result?.user.uid ?? "")"
-        }
-       
+           }
         }
     }
 

@@ -1,9 +1,4 @@
-//
-//  DevSwiftUIApp.swift
-//  DevSwiftUI
-//
-//  Created by Cairocoders
-//
+
  
 import SwiftUI
 import Firebase
