@@ -29,29 +29,19 @@ struct RootsCalculatorView: View {
                                   size: 30.0,
                                   relativeTo: .body))
             
-            //            Image("FindTheRootsEquations")
-            //                .resizable()
-            //                .scaledToFit()
-            //                .scaledToFill()
-            //                .frame(width:400, height: 100)
-            //
+                
+                        Image("FindTheRootsEquations")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:100, height: 100)
             
-            //            HStack{
-            //                Group{
-            //
-            //                    Stepper("precision", value:$desiredPrecision, in: 0...6)
-            //
-            //                        .padding()
-            //                }
-            //                .font(.title2)
-            //                .bold()
-            //            }
+            
             HStack{
                 VStack{
                     HStack{
                         
                         Text("A:")
-                        Text("\(a.formatted(.number.precision(.fractionLength(Int(1)))))")
+                        Text("\(a.formatted(.number.precision(.fractionLength(Int(0)))))")
                         
                     }
                     
@@ -74,7 +64,7 @@ struct RootsCalculatorView: View {
                     HStack{
                         
                         Text("B:")
-                        Text("\(b.formatted(.number.precision(.fractionLength(Int(1)))))")
+                        Text("\(b.formatted(.number.precision(.fractionLength(Int(0)))))")
                         
                     }
                     HStack{
@@ -96,7 +86,7 @@ struct RootsCalculatorView: View {
                     HStack{
                         
                         Text("C:")
-                        Text("\(c.formatted(.number.precision(.fractionLength(Int(1)))))")
+                        Text("\(c.formatted(.number.precision(.fractionLength(Int(0)))))")
                         
                     }
                     HStack{
@@ -134,7 +124,24 @@ struct RootsCalculatorView: View {
             })
             .buttonStyle(.bordered)
             .padding ()
+            
+            HStack {
+                Text ("History")
+                    .font (.title)
+                    .fontWeight (.bold)
+                    .padding(.trailing,200)
+                
+            }
+            // The actual list of results
+            
+            List (priorResults.reversed()) { currentResult in
+                HStack {
+                    Spacer ( )
+                    resultView(somePriorResult: currentResult)
+                }
+            }
         }
+        
     }
     
 }

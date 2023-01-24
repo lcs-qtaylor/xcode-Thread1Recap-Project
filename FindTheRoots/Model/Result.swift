@@ -8,7 +8,7 @@
 import Foundation
 
 struct Result: Identifiable {
-    let id: UUID()
+    let id = UUID()
     let a: Double
     let b: Double
     let c: Double
@@ -18,4 +18,4 @@ struct Result: Identifiable {
 let resultForPreviews = Result(a: 0,
                                b: 0,
                                c: 0,
-                               roots: "x ~ 2.00 and × ~ 4.00")
+                               roots: "x ≈ NaN and × ≈ NaN")
