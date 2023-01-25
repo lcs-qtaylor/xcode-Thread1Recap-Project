@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct CylinderView: View {
-    
+    @State var cylPriorResults: [CylinderResult] = []
     let pie = Double.pi
     @State var height: Double = 0
     @State var radius: Double = 0
     @State var desiredPrecision: Double = 0
+    
     var areaOfBase: Double {
         return pie*radius*radius}
     
@@ -26,86 +27,85 @@ struct CylinderView: View {
         return pie*radius*radius*height}
     
     var body: some View {
-        VStack(spacing: 5){
-            ZStack{
-                HStack{
-                    
-                    Image("")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width:800,height:150)
-                        .padding(.leading,500)
-                }
-                Text("Cylinder")
-                    .font(.largeTitle)
-                    .bold()
-                    .padding(.top,25)
-            }
-            Text("Height")
-                .font(.title2)
+        VStack{
+            
+            
+            Text("Cylinder")
+                .font(.largeTitle)
+                .bold()
+            
             
             HStack{
+                Spacer()
+                Text("Height :")
+                    .font(.title2)
+                
+                Text("\(height.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
+                    .font(.title2)
+                
                 Stepper("",
                         value: $height,
                         in: 0.0...100.0,
                         step: 1.0)
-                .padding(.trailing, 140)
+                
+                
                 Spacer()
+                    .padding(.leading, 100)
             }
             //create Slider to change value of length and Width
-            HStack{
-                Slider(value: $height,
-                       in: 0.0...100.0,
-                       label: {
-                    Text("Opacity")
-                },
-                       minimumValueLabel: {
-                    Text("0")
-                },
-                       maximumValueLabel: {
-                    Text("100")
-                })
-                .padding()
-            }
+            
+            Slider(value: $height,
+                   in: 0.0...100.0,
+                   label: {
+                Text("Opacity")
+            },
+                   minimumValueLabel: {
+                Text("0")
+            },
+                   maximumValueLabel: {
+                Text("100")
+            })
+            .padding()
+            
             // use String interpulation to convert the Double data type to text (String)
             
             // \(variable)
-            Text("\(height.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
-                .font(.title2)
-            Text("Radius")
-                .font(.title2)
+            
             HStack{
+                Spacer()
+                Text("Radius :")
+                    .font(.title2)
+                
+                Text("\(radius.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
+                    .font(.title2)
+                
                 Stepper("",
                         value: $radius,
                         in: 0.0...100.0,
                         step: 1.0)
-                .padding(.trailing, 140)
+                
+                
                 Spacer()
+                    .padding(.leading, 100)
             }
-            HStack{
-                Slider(value: $radius,
-                       in: 0.0...100.0,
-                       label: {
-                    Text("Opacity")
-                },
-                       minimumValueLabel: {
-                    Text("0")
-                },
-                       maximumValueLabel: {
-                    Text("100")
-                })
-                .padding()
-            }
-            Text("\(radius.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
-                .font(.title2)
+            //create Slider to change value of length and Width
             
-            //            Divider()
-            
-            VStack(spacing: 5){
-                Spacer()
+            Slider(value: $radius,
+                   in: 0.0...100.0,
+                   label: {
+                Text("Opacity")
+            },
+                   minimumValueLabel: {
+                Text("0")
+            },
+                   maximumValueLabel: {
+                Text("100")
+            })
+            .padding()
+            VStack{
                 HStack{
                     
-                    Text("Area Of Base")
+                    Text("Area Of Base :")
                         .padding(.leading, 10)
                     
                     Text("\(areaOfBase.formatted(.number.precision(.fractionLength(0))))")
@@ -117,7 +117,7 @@ struct CylinderView: View {
                 .border(.black,width:2)
                 .bold()
                 HStack{
-                    Text("Area Of Lateral Surface")
+                    Text("Area Of Lateral Surface :")
                         .padding(.leading, 10)
                     
                     Text("\(areaOfLateralSurface.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
@@ -127,7 +127,7 @@ struct CylinderView: View {
                 .border(.black,width:2)
                 .bold()
                 HStack{
-                    Text("Area Of Total")
+                    Text("Area Of Total :")
                         .padding(.leading, 10)
                     Text("\(areaOfTotal.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                     Spacer()
@@ -137,7 +137,7 @@ struct CylinderView: View {
                 .bold()
                 HStack{
                     
-                    Text("Volume")
+                    Text("Volume :")
                         .padding(.leading, 10)
                     Text("\(volume.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                     Spacer()
@@ -160,9 +160,41 @@ struct CylinderView: View {
                     .bold()
                 }
             }
+            Button(action: {
+                let latestResult = CylinderResult (hieght: height,
+                                                   radius: radius,
+                                                   areaOfBase: areaOfBase,
+                                                   areaOfLateralSurface: areaOfLateralSurface,
+                                                   areaOfTotal: areaOfTotal,
+                                                   volume:volume)
+                
+                cylPriorResults.append(latestResult)
+            }, label: {
+                Text ("Save Result")
+                
+            })
+            .buttonStyle(.bordered)
+            .padding ()
+            
+            HStack {
+                Text ("History")
+                    .font (.title)
+                    .fontWeight (.bold)
+                    .padding(.trailing,200)
+                
+            }
+            // The actual list of results
+            List (cylPriorResults.reversed()) { currentResult in
+                HStack {
+                    Spacer ()
+                    CylinderResultView(cylSomePriorResult: currentResult)
+                }
+            }
+            .padding(.bottom, 170)
         }
     }
 }
+
 struct CylinderView_Previews: PreviewProvider {
     static var previews: some View {
         CylinderView()

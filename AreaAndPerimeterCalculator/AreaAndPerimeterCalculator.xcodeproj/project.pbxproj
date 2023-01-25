@@ -18,6 +18,8 @@
 		9691EB8429818E3E005BA607 /* RootResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691EB8329818E3E005BA607 /* RootResult.swift */; };
 		9691EB8629818EB7005BA607 /* RectangleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691EB8529818EB7005BA607 /* RectangleResult.swift */; };
 		9691EB882981903D005BA607 /* RectangleResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691EB872981903D005BA607 /* RectangleResultView.swift */; };
+		9691EB8C2981D1B7005BA607 /* CylinderResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691EB8B2981D1B7005BA607 /* CylinderResultView.swift */; };
+		9691EB8E2981D1C7005BA607 /* CylinderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691EB8D2981D1C7005BA607 /* CylinderResult.swift */; };
 		96E8EC60297B24B6008B82D0 /* CylinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8EC5F297B24B6008B82D0 /* CylinderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		9691EB8329818E3E005BA607 /* RootResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResult.swift; sourceTree = "<group>"; };
 		9691EB8529818EB7005BA607 /* RectangleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleResult.swift; sourceTree = "<group>"; };
 		9691EB872981903D005BA607 /* RectangleResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleResultView.swift; sourceTree = "<group>"; };
+		9691EB8B2981D1B7005BA607 /* CylinderResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderResultView.swift; sourceTree = "<group>"; };
+		9691EB8D2981D1C7005BA607 /* CylinderResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderResult.swift; sourceTree = "<group>"; };
 		96E8EC5F297B24B6008B82D0 /* CylinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,7 @@
 			children = (
 				9691EB872981903D005BA607 /* RectangleResultView.swift */,
 				9691EB8129818E09005BA607 /* RootResultView.swift */,
+				9691EB8B2981D1B7005BA607 /* CylinderResultView.swift */,
 			);
 			path = ResultView;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				9691EB8329818E3E005BA607 /* RootResult.swift */,
 				9691EB8529818EB7005BA607 /* RectangleResult.swift */,
+				9691EB8D2981D1C7005BA607 /* CylinderResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9691EB8C2981D1B7005BA607 /* CylinderResultView.swift in Sources */,
 				963E37E32979A18D00041136 /* AreaAndPerimeterCalculatorApp.swift in Sources */,
 				96E8EC60297B24B6008B82D0 /* CylinderView.swift in Sources */,
 				9691EB8629818EB7005BA607 /* RectangleResult.swift in Sources */,
@@ -192,6 +199,7 @@
 				968D33292979CB75007A9CA5 /* TempConvertF.swift in Sources */,
 				9691EB8029818DDA005BA607 /* RootCalculatorView.swift in Sources */,
 				9691EB8229818E09005BA607 /* RootResultView.swift in Sources */,
+				9691EB8E2981D1C7005BA607 /* CylinderResult.swift in Sources */,
 				9691EB882981903D005BA607 /* RectangleResultView.swift in Sources */,
 				9691EB8429818E3E005BA607 /* RootResult.swift in Sources */,
 				963E37F62979A40800041136 /* RectangleView.swift in Sources */,
