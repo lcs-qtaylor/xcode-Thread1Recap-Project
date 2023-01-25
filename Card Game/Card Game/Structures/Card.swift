@@ -30,3 +30,4 @@ let Beast = card(creatureName: "Forest Giant", imageName: "Monster", health: "6"
 let Pheonix = card(creatureName: "Blazed Phoenix", imageName: "Phoenix", health: "7", damage: "9", manaCost:"7", manaType: "Fire", creatureType: "Phoenix", description: "A firey demon seen flying through the deep plains", rarity: "Mythical", navTitle: "Blazed Phoenix")
 
 let allCards = [leviathon, Beast, Pheonix]
+

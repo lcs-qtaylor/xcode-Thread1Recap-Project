@@ -1,15 +1,15 @@
 //
-//  resultView.swift
-//  FindTheRoots
+//  RootResultView.swift
+//  AreaAndPerimeterCalculator
 //
-//  Created by Quin Taylor on 2023-01-24.
+//  Created by Quin Taylor on 2023-01-25.
 //
 
 import SwiftUI
 
-struct resultView: View {
+struct RootResultView: View {
     
-    let somePriorResult: Result
+    let somePriorResult: RootResult
     var body: some View {
         VStack(spacing: 10){
 
@@ -43,8 +43,8 @@ struct resultView: View {
     }
     }
 
-struct resultView_Previews: PreviewProvider {
+struct RootResultView_Previews: PreviewProvider {
     static var previews: some View {
-        resultView(somePriorResult: resultForPreviews )
+        RootResultView(somePriorResult: resultForPreviews )
     }
 }

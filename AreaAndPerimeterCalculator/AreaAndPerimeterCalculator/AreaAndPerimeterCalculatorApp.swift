@@ -52,6 +52,16 @@ struct AreaAndPerimeterCalculatorApp: App {
                 
                     .toolbarBackground( Color.black, for: .tabBar)
                     .tag(4)
+                
+                RootsCalculatorView()
+                    .tabItem {
+                        Image(systemName: "x.squareroot" )
+                        Text("Root")
+                    }
+                    .toolbar(.visible, for: .tabBar)
+                
+                    .toolbarBackground( Color.black, for: .tabBar)
+                    .tag(5)
             }
             
         }
