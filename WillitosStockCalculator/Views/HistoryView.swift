@@ -12,8 +12,9 @@ struct HistoryView: View {
     var body: some View {
         VStack {
             
-            Text("History")
-                .font(.headline.smallCaps())
+            Text("Trade History")
+                .font(.largeTitle)
+                .bold()
                 .padding()
             
             List(history.reversed()) { somePriorResult in

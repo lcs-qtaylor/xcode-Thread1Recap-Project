@@ -10,7 +10,44 @@ import SwiftUI
 struct ResultView: View {
     let priorResult: Result
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            
+            VStack(alignment: .leading, spacing: 5) {
+                
+                Text("Price :")
+                Divider()
+                Text("Gain / Loss :")
+                Divider()
+                Text("Quantity :")
+                Divider()
+                Text("Return :")
+                Divider()
+                Text("Profit :")
+                Divider()
+            }
+            .font(.headline.smallCaps())
+            Spacer()
+           
+            VStack(alignment: .trailing, spacing: 5) {
+
+                
+                Text("$ \(priorResult.buyStockPrice)")
+                Divider()
+                Text("\(priorResult.selectedPercent)%")
+                Divider()
+                Text("# \(priorResult.Quantity)")
+                Divider()
+                Text("$ \(priorResult.Return)")
+                Divider()
+                Text("$ \(priorResult.Profit)")
+                Divider()
+              
+            }
+            .font(.headline.smallCaps())
+           
+
+        }
+        .padding(.horizontal, 10)
     }
 }
 

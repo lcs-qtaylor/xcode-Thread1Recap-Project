@@ -92,7 +92,7 @@ struct CalculatorView: View {
             return "Cannot be calculated..."
         }
         
-       
+        
         return total3.formatted(.number.precision(.fractionLength(2)))
         
     }
@@ -107,35 +107,35 @@ struct CalculatorView: View {
                             HStack {
                                 Spacer()
                                 Text("Price")
-                              
+                                
                             }
                             .font(.headline.smallCaps())
-                          
+                            
                             HStack(spacing: 5){
                                 Text("$")
-                             
+                                
                                 TextField("0.0", text: $buyStockPrice)
                                 
                                 
                             }
-                          
+                            
                         }
                         
                         
                         Group {
                             HStack {
                                 Text("Quantity")
-                              
+                                
                             }
                             .font(.headline.smallCaps())
-                          
+                            
                             HStack {
                                 Text("#")
                                 Text("\(Quantity.formatted(.number.precision(.fractionLength(Int(1)))))")
                                 Spacer()
                             }
                         }
-                       
+                        
                     }
                     HStack{
                         Slider(value: $Quantity,
@@ -177,7 +177,7 @@ struct CalculatorView: View {
                         }
                     }
                 }
-             
+                
                 Group {
                     
                     HStack {
@@ -263,24 +263,23 @@ struct CalculatorView: View {
                 Button(action: {
                     
                     // Create a string version of the bill amount
-                    guard let amount = stockPrice else {
+                    guard let price = stockPrice else {
                         return
                     }
-                    let amountFormatted = String( amount.formatted(.number.precision(.fractionLength(2))))
+                    let priceFormatted = String ( price.formatted(.number.precision(.fractionLength(2))))
                     
-                    // Create a string version of the percentage
-                    let percentage = String(selectedPercent)
+                    let percent = String(selectedPercent)
                     
-                    // Create a string version of the people count
+                    
                     let quantity = String(Quantity)
                     
-                    // Create the prior result, all put together into an instance of Result
-                    let priorResult = Result(ProvidedStockPrice: amountFormatted,
-                                             Shares: quantity,
-                                             stockPercent: percentage,
-                                             Return: totalReturnFormatted)
                     
-                    // Save the prior result to the history
+                    let priorResult = Result(buyStockPrice: priceFormatted,
+                                             Quantity: quantity,
+                                             selectedPercent: percent,
+                                             Return: totalReturnFormatted,
+                                             Profit: totalProfitFormatted)
+                    
                     history.append(priorResult)
                     
                 }, label: {
