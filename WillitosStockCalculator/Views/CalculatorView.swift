@@ -12,6 +12,7 @@ struct CalculatorView: View {
     @State var buyStockPrice = ""
     @State var Quantity = ""
     @State var stockPercent = ""
+    @State var Return = ""
     @Binding var history: [Result]
     // MARK: Computed properties
     var stockPrice: Double? {
@@ -30,6 +31,15 @@ struct CalculatorView: View {
         }
         return quantityAsDouble
     }
+    var percent: Double? {
+        
+        guard let percentAsDouble = Double(stockPercent) else {
+           
+            return nil
+        }
+        return percentAsDouble
+    }
+    
     //
     var totalReturn: Double? {
         
@@ -38,22 +48,21 @@ struct CalculatorView: View {
             return nil
         }
         
-        // Calculate the tip dollar amount
-        let  = amount * quantity
+      
+        let investment = amount * quantity!
         
         // Calculate bill total, including the tip
-        let billTotal = amount + tipAmount
+        let gain = investment * percent!
         
         // Return total bill
-        return billTotal
+        return gain
     }
     
     
     //
     var totalReturnFormatted: String {
         
-        // Could the total with tip be calculated?
-        // Or did that fail because the bill amount input was nonsense?
+
         guard let total = totalReturn else {
             return "Cannot be calculated..."
         }
@@ -91,7 +100,23 @@ struct CalculatorView: View {
                     HStack(spacing: 5){
                         Text("")
                         
-                        TextField("0", text: $Quantity)
+                        TextField("0.0", text: $Quantity)
+                        
+                    }
+                    .padding(.horizontal)
+                    
+                    
+                }
+                Group{
+                    HStack {
+                        Text("Quantity")
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    HStack(spacing: 5){
+                        Text("%")
+                        
+                        TextField("0.0", text: $stockPercent)
                         
                     }
                     .padding(.horizontal)
@@ -99,38 +124,10 @@ struct CalculatorView: View {
                     
                 }
                 
-                HStack{
-                    Spacer()
-                    Text("Gain/Loss")
-                        .font(.title2)
-                        .bold()
-                    Text("\(stockPercent.formatted(.number.precision(.fractionLength(Int(0)))))")
-                        .font(.title2)
-                        .bold()
-                    Stepper("",
-                            value: $stockPercent,
-                            in: 0...100,
-                            step: 1.0)
-                    .padding(.trailing, 140)
-                    Spacer()
-                }
-                HStack{
-                    Slider(value: $stockPercent,
-                           in: -100...100,
-                           label: {
-                        Text("Opacity")
-                    },
-                           minimumValueLabel: {
-                        Text("-100")
-                    },
-                           maximumValueLabel: {
-                        Text("100")
-                    })
-                    .padding()
-                }
             }
             
         }
+       
         .navigationTitle("Broker Calculator")
         
         
