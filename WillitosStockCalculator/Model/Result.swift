@@ -9,10 +9,13 @@ import Foundation
 
 struct Result: Identifiable {
 let id = UUID()
-    let stockName: String
     let ProvidedStockPrice: String
     let Shares: String
-    let StockPrice: String
+    let stockPercent: String
+    let Return: String
     
 }
 
+var exampleResultForPreviews = Result(ProvidedStockPrice: "0.0", Shares: "0", stockPercent: "0", Return: "0.0")
+
+var historyForPreviews = [exampleResultForPreviews]

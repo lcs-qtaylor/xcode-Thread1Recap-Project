@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
+    let priorResult: Result
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +16,6 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView()
+        ResultView(priorResult: exampleResultForPreviews)
     }
 }
