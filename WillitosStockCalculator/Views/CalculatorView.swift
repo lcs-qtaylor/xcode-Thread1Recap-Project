@@ -138,11 +138,14 @@ struct CalculatorView: View {
                     
                     Group {
                         HStack{
+                            Spacer()
                             Text("Investment")
+                                .font(.headline.smallCaps())
                             Spacer()
                         }
                         .padding(.horizontal)
                         HStack{
+                            Spacer()
                             Text("$")
                             
                             Text(totalInvestmentFormatted)
@@ -151,14 +154,18 @@ struct CalculatorView: View {
                         }
                     }
                 }
+             
                 Group {
+                    
                     HStack {
+                        Spacer()
                         Text("Gain / Loss")
                         Spacer()
                     }
                     .font(.headline.smallCaps())
                     .padding(.horizontal)
                     HStack {
+                        Spacer()
                         Text("%")
                         Text("\(selectedPercent.formatted(.number.precision(.fractionLength(Int(1)))))")
                         Spacer()
@@ -190,11 +197,31 @@ struct CalculatorView: View {
                 
                 Group {
                     HStack{
+                        Spacer()
                         Text("Return")
+                            .font(.headline.smallCaps())
                         Spacer()
                     }
                     .padding(.horizontal)
                     HStack{
+                        Spacer()
+                        Text("$")
+                        
+                        Text(totalReturnFormatted)
+                        
+                        Spacer()
+                    }
+                }
+                Group {
+                    HStack{
+                        Spacer()
+                        Text("Profit")
+                            .font(.headline.smallCaps())
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    HStack{
+                        Spacer()
                         Text("$")
                         
                         Text(totalReturnFormatted)
