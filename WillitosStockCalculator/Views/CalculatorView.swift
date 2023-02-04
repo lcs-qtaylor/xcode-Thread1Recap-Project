@@ -53,6 +53,19 @@ struct CalculatorView: View {
         return Return
     }
     
+    var totalProfit: Double? {
+        guard let investment = totalInvestment else {
+            return nil
+        }
+        guard let Return = totalReturn else {
+            return nil
+        }
+        
+        let profit = Return - investment
+        
+        return profit
+    }
+    
     var totalReturnFormatted: String {
         
         guard let total = totalReturn else {
@@ -71,6 +84,16 @@ struct CalculatorView: View {
         
         // It could be calculated, so format it nicely
         return total2.formatted(.number.precision(.fractionLength(2)))
+        
+    }
+    var totalProfitFormatted: String {
+        
+        guard let total3 = totalProfit else {
+            return "Cannot be calculated..."
+        }
+        
+       
+        return total3.formatted(.number.precision(.fractionLength(2)))
         
     }
     var body: some View {
@@ -224,7 +247,7 @@ struct CalculatorView: View {
                         Spacer()
                         Text("$")
                         
-                        Text(totalReturnFormatted)
+                        Text(totalProfitFormatted)
                         
                         Spacer()
                     }
