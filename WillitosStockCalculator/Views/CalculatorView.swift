@@ -10,8 +10,8 @@ import SwiftUI
 struct CalculatorView: View {
     // MARK: Stored properties
     @State var buyStockPrice = ""
-    let stockPercent = [0...1000]
-    @State var selectedPercent = 0
+    let stockPercent = [0.0...1000.0]
+    @State var selectedPercent = 0.0
     @State var Quantity = 0.0
     @Binding var history: [Result]
     @State var desiredPrecision: Double = 0
@@ -77,35 +77,43 @@ struct CalculatorView: View {
         NavigationView {
             
             VStack(spacing: 5) {
-                
-                Group {
-                    HStack {
-                        Text("Stock Price")
-                        Spacer()
-                    }
-                    .font(.headline.smallCaps())
-                    .padding(.horizontal)
-                    HStack(spacing: 5){
-                        Text("$")
+                VStack{
+                    HStack{
+                        Group{
+                            
+                            HStack {
+                                Spacer()
+                                Text("Price")
+                              
+                            }
+                            .font(.headline.smallCaps())
+                          
+                            HStack(spacing: 5){
+                                Text("$")
+                             
+                                TextField("0.0", text: $buyStockPrice)
+                                
+                                
+                            }
+                          
+                        }
                         
-                        TextField("0.0", text: $buyStockPrice)
                         
+                        Group {
+                            HStack {
+                                Text("Quantity")
+                              
+                            }
+                            .font(.headline.smallCaps())
+                          
+                            HStack {
+                                Text("#")
+                                Text("\(Quantity.formatted(.number.precision(.fractionLength(Int(1)))))")
+                                Spacer()
+                            }
+                        }
+                       
                     }
-                    .padding(.horizontal)
-                }
-                Group {
-                    HStack {
-                        Text("Quantity")
-                        Spacer()
-                    }
-                    .font(.headline.smallCaps())
-                    .padding(.horizontal)
-                    HStack {
-                        Text("#")
-                        Text("\(Quantity.formatted(.number.precision(.fractionLength(Int(1)))))")
-                        Spacer()
-                    }
-                    .padding(.horizontal)
                     HStack{
                         Slider(value: $Quantity,
                                in: 0...100,
@@ -128,6 +136,20 @@ struct CalculatorView: View {
                         .padding(.trailing, 150)
                     }
                     
+                    Group {
+                        HStack{
+                            Text("Investment")
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        HStack{
+                            Text("$")
+                            
+                            Text(totalInvestmentFormatted)
+                            
+                            Spacer()
+                        }
+                    }
                 }
                 Group {
                     HStack {
@@ -137,19 +159,19 @@ struct CalculatorView: View {
                     .font(.headline.smallCaps())
                     .padding(.horizontal)
                     HStack {
-                        Text("#")
+                        Text("%")
                         Text("\(selectedPercent.formatted(.number.precision(.fractionLength(Int(1)))))")
                         Spacer()
                     }
                     .padding(.horizontal)
                     HStack{
-                        Slider(value: $stockPercent,
-                               in: 0...100,
+                        Slider(value: $selectedPercent,
+                               in: -100.0...100.0,
                                label: {
                             Text("Opacity")
                         },
                                minimumValueLabel: {
-                            Text("0.0")
+                            Text("-100.0")
                         },
                                maximumValueLabel: {
                             Text("100.0")
@@ -159,7 +181,7 @@ struct CalculatorView: View {
                     HStack{
                         Stepper("",
                                 value: $selectedPercent,
-                                in: 0.0...100.0,
+                                in: -100.0...100.0,
                                 step: 1.0)
                         .padding(.trailing, 150)
                     }
