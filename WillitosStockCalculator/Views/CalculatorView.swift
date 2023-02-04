@@ -12,33 +12,19 @@ struct CalculatorView: View {
     @State var buyStockPrice = ""
     let stockPercent = [0...1000]
     @State var selectedPercent = 0
-    @State var Quantity = 0
+    @State var Quantity = 0.0
     @Binding var history: [Result]
+    @State var desiredPrecision: Double = 0
     // MARK: Computed properties
     var stockPrice: Double? {
         
         guard let priceAsDouble = Double(buyStockPrice) else {
-           
+            
             return nil
         }
         return priceAsDouble
     }
-//    var quantity: Double? {
-//
-//        guard let quantityAsDouble = Double(Quantity) else {
-//
-//            return nil
-//        }
-//        return quantityAsDouble
-//    }
-//    var percent: Double? {
-//
-//        guard let percentAsDouble = Double(stockPercent) else {
-//
-//            return nil
-//        }
-//        return percentAsDouble
-//    }
+    
     var quantity: Double {
         return Double(Quantity)
     }
@@ -97,6 +83,7 @@ struct CalculatorView: View {
                         Text("Stock Price")
                         Spacer()
                     }
+                    .font(.headline.smallCaps())
                     .padding(.horizontal)
                     HStack(spacing: 5){
                         Text("$")
@@ -111,12 +98,80 @@ struct CalculatorView: View {
                         Text("Quantity")
                         Spacer()
                     }
-                    HStack{
-                        
+                    .font(.headline.smallCaps())
+                    .padding(.horizontal)
+                    HStack {
+                        Text("#")
+                        Text("\(Quantity.formatted(.number.precision(.fractionLength(Int(1)))))")
+                        Spacer()
                     }
+                    .padding(.horizontal)
+                    HStack{
+                        Slider(value: $Quantity,
+                               in: 0...100,
+                               label: {
+                            Text("Opacity")
+                        },
+                               minimumValueLabel: {
+                            Text("0.0")
+                        },
+                               maximumValueLabel: {
+                            Text("100.0")
+                        })
+                        .padding()
+                    }
+                    HStack{
+                        Stepper("",
+                                value: $Quantity,
+                                in: 0.0...100.0,
+                                step: 1.0)
+                        .padding(.trailing, 150)
+                    }
+                    
                 }
                 Group {
+                    HStack {
+                        Text("Gain / Loss")
+                        Spacer()
+                    }
+                    .font(.headline.smallCaps())
+                    .padding(.horizontal)
+                    HStack {
+                        Text("#")
+                        Text("\(selectedPercent.formatted(.number.precision(.fractionLength(Int(1)))))")
+                        Spacer()
+                    }
+                    .padding(.horizontal)
                     HStack{
+                        Slider(value: $stockPercent,
+                               in: 0...100,
+                               label: {
+                            Text("Opacity")
+                        },
+                               minimumValueLabel: {
+                            Text("0.0")
+                        },
+                               maximumValueLabel: {
+                            Text("100.0")
+                        })
+                        .padding()
+                    }
+                    HStack{
+                        Stepper("",
+                                value: $selectedPercent,
+                                in: 0.0...100.0,
+                                step: 1.0)
+                        .padding(.trailing, 150)
+                    }
+                    
+                }
+                
+                Group {
+                    HStack{
+                        Text("Return")
+                        Spacer()
+                    }
+                    .padding(.horizontal)
                     HStack{
                         Text("$")
                         
@@ -125,7 +180,13 @@ struct CalculatorView: View {
                         Spacer()
                     }
                 }
-                
+                Group{
+                    
+                    Stepper("precision", value:$desiredPrecision, in: 0...6)
+                        .font(.title2)
+                        .bold()
+                        .padding()
+                }
                 
                 Button(action: {
                     
@@ -158,9 +219,8 @@ struct CalculatorView: View {
                 
                 Spacer()
             }
-            .navigationTitle("Broker Calculator")
-            
         }
+        .navigationTitle("Broker Calculator")
     }
 }
 struct CalculatorView_Previews: PreviewProvider {
