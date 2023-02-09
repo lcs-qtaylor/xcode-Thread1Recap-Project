@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		963F821D29957F08009813AE /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F821C29957F08009813AE /* test.swift */; };
 		96A3E544298DBEA5007701BA /* WillitosStockCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A3E543298DBEA5007701BA /* WillitosStockCalculatorApp.swift */; };
 		96A3E548298DBEA6007701BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A3E547298DBEA6007701BA /* Assets.xcassets */; };
 		96A3E54B298DBEA6007701BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A3E54A298DBEA6007701BA /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		963F821C29957F08009813AE /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		96A3E540298DBEA5007701BA /* WillitosStockCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillitosStockCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A3E543298DBEA5007701BA /* WillitosStockCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillitosStockCalculatorApp.swift; sourceTree = "<group>"; };
 		96A3E547298DBEA6007701BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,10 +43,10 @@
 		96A3E537298DBEA5007701BA = {
 			isa = PBXGroup;
 			children = (
+				96A3E542298DBEA5007701BA /* WillitosStockCalculator */,
 				96A3E553298DBEC4007701BA /* Model */,
 				96A3E552298DBEBC007701BA /* Helpers */,
 				96A3E551298DBEB4007701BA /* Views */,
-				96A3E542298DBEA5007701BA /* WillitosStockCalculator */,
 				96A3E541298DBEA5007701BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +90,7 @@
 		96A3E552298DBEBC007701BA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				963F821C29957F08009813AE /* test.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A3E555298DBEFB007701BA /* CalculatorView.swift in Sources */,
+				963F821D29957F08009813AE /* test.swift in Sources */,
 				96A3E55B298DBF2D007701BA /* Result.swift in Sources */,
 				96A3E559298DBF16007701BA /* HistoryView.swift in Sources */,
 				96A3E544298DBEA5007701BA /* WillitosStockCalculatorApp.swift in Sources */,

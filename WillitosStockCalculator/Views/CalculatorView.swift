@@ -101,11 +101,13 @@ struct CalculatorView: View {
             ZStack{
                 VStack(spacing: 15) {
                     VStack{
+    
                         ZStack{
                             Rectangle()
                                 .frame(width: 380, height: 60)
                                 .cornerRadius(15)
                                 .foregroundColor(.white)
+
                             HStack {
                                 Spacer()
                                     .padding()
@@ -130,8 +132,8 @@ struct CalculatorView: View {
                                 HStack {
                                     Spacer()
                                     
-                                    Text("Quantity")
-                                    Text("#")
+                                    Text("Quantity (#) :")
+                                   
                                     Text("\(Quantity.formatted(.number.precision(.fractionLength(1))))")
                                     
                                     Spacer()
@@ -185,50 +187,56 @@ struct CalculatorView: View {
                         }
                     }
                     
-                    Group {
+                    Group{
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 380, height:150)
+                                .cornerRadius(15)
+                                .foregroundColor(.white)
+                            VStack{
+                                HStack {
+                                    Spacer()
+                                    Text("Gain / Loss :")
+                                   
                         
-                        HStack {
-                            Spacer()
-                            Text("Gain / Loss")
-                            Spacer()
+                               
+                               
+                               
+                                    Text("\(selectedPercent.formatted(.number.precision(.fractionLength(1))))")
+                                    Text("%")
+                                    Spacer()
+                                }
+                                .font(.headline.smallCaps())
+                                .padding(.horizontal)
+                                .padding(.horizontal)
+                                HStack{
+                                    Slider(value: $selectedPercent,
+                                           in: -100.0...100.0,
+                                           label: {
+                                        Text("Opacity")
+                                    },
+                                           minimumValueLabel: {
+                                        Text("-100.0")
+                                    },
+                                           maximumValueLabel: {
+                                        Text("100.0")
+                                    })
+                                    .padding()
+                                }
+                                HStack{
+                                    Stepper("",
+                                            value: $selectedPercent,
+                                            in: -100.0...100.0,
+                                            step: 0.1)
+                                    .padding(.trailing, 150)
+                                }
+                            }
                         }
-                        .font(.headline.smallCaps())
-                        .padding(.horizontal)
-                        HStack {
-                            Spacer()
-                            Text("%")
-                            Text("\(selectedPercent.formatted(.number.precision(.fractionLength(1))))")
-                            Spacer()
-                        }
-                        .padding(.horizontal)
-                        HStack{
-                            Slider(value: $selectedPercent,
-                                   in: -100.0...100.0,
-                                   label: {
-                                Text("Opacity")
-                            },
-                                   minimumValueLabel: {
-                                Text("-100.0")
-                            },
-                                   maximumValueLabel: {
-                                Text("100.0")
-                            })
-                            .padding()
-                        }
-                        HStack{
-                            Stepper("",
-                                    value: $selectedPercent,
-                                    in: -100.0...100.0,
-                                    step: 0.1)
-                            .padding(.trailing, 150)
-                        }
-                        
                     }
-                    
                     Group {
                         HStack{
                             Spacer()
-                            Text("Return")
+                            Text("Return :")
                                 .font(.headline.smallCaps())
                             Spacer()
                         }
@@ -245,7 +253,7 @@ struct CalculatorView: View {
                     Group {
                         HStack{
                             Spacer()
-                            Text("Profit")
+                            Text("Profit :")
                                 .font(.headline.smallCaps())
                             Spacer()
                         }

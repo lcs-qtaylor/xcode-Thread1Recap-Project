@@ -15,13 +15,13 @@ struct WillitosStockCalculatorApp: App {
             TabView {
                CalculatorView(history: $history)
                     .tabItem {
-                        Image(systemName: "rectangle.split.2x2.fill")
+                        Image(systemName: "candybarphone")
                         Text("Calculate")
                     }
                 
                 HistoryView(history: $history)
                     .tabItem {
-                        Image(systemName: "clock.fill")
+                        Image(systemName: "memorychip.fill")
                         Text("History")
                     }
             }
