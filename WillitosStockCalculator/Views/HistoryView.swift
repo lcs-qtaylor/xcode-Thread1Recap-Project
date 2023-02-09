@@ -20,9 +20,9 @@ struct HistoryView: View {
             List(history.reversed()) { somePriorResult in
                 ResultView(priorResult: somePriorResult)
             }
-
+            
         }
-
+        
     }
 }
 

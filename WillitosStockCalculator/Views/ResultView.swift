@@ -27,9 +27,9 @@ struct ResultView: View {
             }
             .font(.headline.smallCaps())
             Spacer()
-           
+            
             VStack(alignment: .trailing, spacing: 5) {
-
+                
                 
                 Text("$ \(priorResult.buyStockPrice)")
                 Divider()
@@ -41,11 +41,11 @@ struct ResultView: View {
                 Divider()
                 Text("$ \(priorResult.Profit)")
                 Divider()
-              
+                
             }
             .font(.headline.smallCaps())
-           
-
+            
+            
         }
         .padding(.horizontal, 10)
     }

@@ -72,8 +72,8 @@ struct CalculatorView: View {
             return "Return cannot be calculated..."
         }
         
-        // It could be calculated, so format it nicely
-        return total.formatted(.number.precision(.fractionLength(Int(desiredPrecision))))
+        
+        return total.formatted(.number.precision(.fractionLength(1)))
         
     }
     var totalInvestmentFormatted: String {
@@ -82,8 +82,8 @@ struct CalculatorView: View {
             return "Investment cannot be calculated..."
         }
         
-        // It could be calculated, so format it nicely
-        return total2.formatted(.number.precision(.fractionLength(Int(desiredPrecision))))
+        
+        return total2.formatted(.number.precision(.fractionLength(1)))
         
     }
     var totalProfitFormatted: String {
@@ -93,14 +93,8 @@ struct CalculatorView: View {
         }
         
         
-        return total3.formatted(.number.precision(.fractionLength(Int(desiredPrecision))))
+        return total3.formatted(.number.precision(.fractionLength(1)))
         
-    }
-    func reset(percent: Double?) {
-        if percent != nil {
-            print(percent!)
-        }
-        print("done")
     }
     var body: some View {
         NavigationView {
@@ -172,6 +166,13 @@ struct CalculatorView: View {
                                             in: 0.0...100.0,
                                             step: 0.1)
                                     .padding(.trailing, 150)
+                                    
+                                    Button(action: {
+                                     
+                                    
+                                    }, label: {
+                                        Image(systemName: "")
+                                    })
                                 }
                             }
                         }
@@ -274,8 +275,16 @@ struct CalculatorView: View {
                             Spacer()
                         }
                     }
-                   
+                    
                     HStack{
+                        Button(action: {
+                            selectedPercent = 0.0
+                            buyStockPrice = ""
+                            Quantity = 0.0
+                        }, label: {
+                            Text("Reset")
+                        })
+                        
                         Button(action: {
                             guard let price = stockPrice else {
                                 return
@@ -296,21 +305,14 @@ struct CalculatorView: View {
                             
                         }, label: {
                             Text("Save")
-                                .font(.headline.smallCaps())
+                                
                         })
-                        .buttonStyle(.bordered)
-                    
-                        .padding()
-                        
-                        Button(action: {
-                            reset(percent: nil)
-                        }, label: {Text("reset")
-                            
-                        })
-                        .buttonStyle(.bordered)
-                        
                        
+                        
+                        .padding()
                     }
+                    .font(.headline.smallCaps())
+                    .buttonStyle(.bordered)
                     Spacer()
                 }
             }
