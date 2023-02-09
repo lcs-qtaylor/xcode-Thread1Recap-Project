@@ -96,18 +96,25 @@ struct CalculatorView: View {
         return total3.formatted(.number.precision(.fractionLength(Int(desiredPrecision))))
         
     }
+    func reset(percent: Double?) {
+        if percent != nil {
+            print(percent!)
+        }
+        print("done")
+    }
     var body: some View {
         NavigationView {
+            
             ZStack{
                 VStack(spacing: 15) {
                     VStack{
-    
+                        
                         ZStack{
                             Rectangle()
                                 .frame(width: 380, height: 60)
                                 .cornerRadius(15)
                                 .foregroundColor(.white)
-
+                            
                             HStack {
                                 Spacer()
                                     .padding()
@@ -133,7 +140,7 @@ struct CalculatorView: View {
                                     Spacer()
                                     
                                     Text("Quantity (#) :")
-                                   
+                                    
                                     Text("\(Quantity.formatted(.number.precision(.fractionLength(1))))")
                                     
                                     Spacer()
@@ -197,11 +204,11 @@ struct CalculatorView: View {
                                 HStack {
                                     Spacer()
                                     Text("Gain / Loss :")
-                                   
-                        
-                               
-                               
-                               
+                                    
+                                    
+                                    
+                                    
+                                    
                                     Text("\(selectedPercent.formatted(.number.precision(.fractionLength(1))))")
                                     Text("%")
                                     Spacer()
@@ -267,40 +274,44 @@ struct CalculatorView: View {
                             Spacer()
                         }
                     }
-                    //                Group{
-                    //
-                    //                    Stepper("precision", value:$desiredPrecision, in: 0...6)
-                    //                        .font(.title2)
-                    //                        .bold()
-                    //                        .padding()
-                    //                }
+                   
+                    HStack{
+                        Button(action: {
+                            guard let price = stockPrice else {
+                                return
+                            }
+                            let priceFormatted = String ( price.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))
+                            
+                            let percent = String(selectedPercent)
+                            
+                            let quantity = String(Quantity)
+                            
+                            let priorResult = Result(buyStockPrice: priceFormatted,
+                                                     Quantity: quantity,
+                                                     selectedPercent: percent,
+                                                     Return: totalReturnFormatted,
+                                                     Profit: totalProfitFormatted)
+                            
+                            history.append(priorResult)
+                            
+                        }, label: {
+                            Text("Save")
+                                .font(.headline.smallCaps())
+                        })
+                        .buttonStyle(.bordered)
                     
-                    Button(action: {
-                        guard let price = stockPrice else {
-                            return
-                        }
-                        let priceFormatted = String ( price.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))
-                        
-                        let percent = String(selectedPercent)
-                        
-                        let quantity = String(Quantity)
-                        
-                        let priorResult = Result(buyStockPrice: priceFormatted,
-                                                 Quantity: quantity,
-                                                 selectedPercent: percent,
-                                                 Return: totalReturnFormatted,
-                                                 Profit: totalProfitFormatted)
-                        
-                        history.append(priorResult)
-                        
-                    }, label: {
-                        Text("Save")
-                            .font(.headline.smallCaps())
-                    })
-                    .buttonStyle(.bordered)
-                    
-                    Spacer()
                         .padding()
+                        
+                        Button(action: {
+                            reset(percent: nil)
+                        }, label: {Text("reset")
+                            
+                        })
+                        .buttonStyle(.bordered)
+                        
+                       
+                    }
+                    Spacer()
                 }
             }
             .background(
@@ -310,6 +321,7 @@ struct CalculatorView: View {
         
         .navigationTitle("Stock Calculator")
     }
+    
 }
 
 struct CalculatorView_Previews: PreviewProvider {
