@@ -17,7 +17,7 @@ struct RectangleResultView: View {
                         HStack{
                             HStack{
                                 Text("Length:")
-                                Text("\(recSomePriorResult.length.formatted(.number.precision(.fractionLength(Int(0)))))")
+                                Text("\(recSomePriorResult.length.formatted(.number.precision(.fractionLength(1))))")
                                 
                             }
                             HStack{

@@ -33,7 +33,7 @@ struct ResultView: View {
                 
                 Text("$ \(priorResult.buyStockPrice)")
                 Divider()
-                Text("\(priorResult.selectedPercent)%")
+                Text("\(priorResult.selectedPercent)")
                 Divider()
                 Text("# \(priorResult.Quantity)")
                 Divider()
@@ -53,6 +53,6 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView(priorResult: exampleResultForPreviews)
+        ResultView(priorResult: exampleOneResultForPreviews)
     }
 }

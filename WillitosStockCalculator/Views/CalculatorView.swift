@@ -10,7 +10,7 @@ import SwiftUI
 struct CalculatorView: View {
     // MARK: Stored properties
     @State var buyStockPrice = ""
-    let stockPercent = [0.0...1000.0]
+    let stockPercent = [-100.0...100.0]
     @State var selectedPercent = 0.0
     @State var Quantity = 0.0
     @Binding var history: [Result]
@@ -69,100 +69,166 @@ struct CalculatorView: View {
     var totalReturnFormatted: String {
         
         guard let total = totalReturn else {
-            return "Cannot be calculated..."
+            return "Return cannot be calculated..."
         }
         
         // It could be calculated, so format it nicely
-        return total.formatted(.number.precision(.fractionLength(2)))
+        return total.formatted(.number.precision(.fractionLength(Int(desiredPrecision))))
         
     }
     var totalInvestmentFormatted: String {
         
         guard let total2 = totalInvestment else {
-            return "Cannot be calculated..."
+            return "Investment cannot be calculated..."
         }
         
         // It could be calculated, so format it nicely
-        return total2.formatted(.number.precision(.fractionLength(2)))
+        return total2.formatted(.number.precision(.fractionLength(Int(desiredPrecision))))
         
     }
     var totalProfitFormatted: String {
         
         guard let total3 = totalProfit else {
-            return "Cannot be calculated..."
+            return "Profit cannot be calculated"
         }
         
         
-        return total3.formatted(.number.precision(.fractionLength(2)))
+        return total3.formatted(.number.precision(.fractionLength(Int(desiredPrecision))))
         
     }
     var body: some View {
         NavigationView {
-            
-            VStack(spacing: 5) {
-                VStack{
-                    HStack{
-                        Group{
-                            
+            ZStack{
+                VStack(spacing: 15) {
+                    VStack{
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 380, height: 60)
+                                .cornerRadius(15)
+                                .foregroundColor(.white)
                             HStack {
                                 Spacer()
+                                    .padding()
                                 Text("Price")
-                                
-                            }
-                            .font(.headline.smallCaps())
-                            
-                            HStack(spacing: 5){
                                 Text("$")
                                 
                                 TextField("0.0", text: $buyStockPrice)
                                 
-                                
                             }
+                            .font(.largeTitle)
+                            
                             
                         }
                         
                         
-                        Group {
-                            HStack {
-                                Text("Quantity")
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 380, height:150)
+                                .cornerRadius(15)
+                                .foregroundColor(.white)
+                            VStack{
+                                HStack {
+                                    Spacer()
+                                    
+                                    Text("Quantity")
+                                    Text("#")
+                                    Text("\(Quantity.formatted(.number.precision(.fractionLength(1))))")
+                                    
+                                    Spacer()
+                                }
+                                .font(.headline.smallCaps())
+                                .bold()
                                 
+                                
+                                
+                                HStack{
+                                    Slider(value: $Quantity,
+                                           in: 0...100,
+                                           label: {
+                                        Text("Opacity")
+                                    },
+                                           minimumValueLabel: {
+                                        Text("0.0")
+                                    },
+                                           maximumValueLabel: {
+                                        Text("100.0")
+                                    })
+                                    .padding()
+                                }
+                                
+                                
+                                HStack{
+                                    Stepper("",
+                                            value: $Quantity,
+                                            in: 0.0...100.0,
+                                            step: 0.1)
+                                    .padding(.trailing, 150)
+                                }
                             }
-                            .font(.headline.smallCaps())
-                            
-                            HStack {
-                                Text("#")
-                                Text("\(Quantity.formatted(.number.precision(.fractionLength(Int(1)))))")
+                        }
+                        Group {
+                            HStack{
+                                Spacer()
+                                Text("Investment")
+                                    .font(.headline.smallCaps())
+                                Spacer()
+                            }
+                            .padding(.horizontal)
+                            HStack{
+                                Spacer()
+                                Text("$")
+                                
+                                Text(totalInvestmentFormatted)
+                                
                                 Spacer()
                             }
                         }
+                    }
+                    
+                    Group {
                         
-                    }
-                    HStack{
-                        Slider(value: $Quantity,
-                               in: 0...100,
-                               label: {
-                            Text("Opacity")
-                        },
-                               minimumValueLabel: {
-                            Text("0.0")
-                        },
-                               maximumValueLabel: {
-                            Text("100.0")
-                        })
-                        .padding()
-                    }
-                    HStack{
-                        Stepper("",
-                                value: $Quantity,
-                                in: 0.0...100.0,
-                                step: 1.0)
-                        .padding(.trailing, 150)
+                        HStack {
+                            Spacer()
+                            Text("Gain / Loss")
+                            Spacer()
+                        }
+                        .font(.headline.smallCaps())
+                        .padding(.horizontal)
+                        HStack {
+                            Spacer()
+                            Text("%")
+                            Text("\(selectedPercent.formatted(.number.precision(.fractionLength(1))))")
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        HStack{
+                            Slider(value: $selectedPercent,
+                                   in: -100.0...100.0,
+                                   label: {
+                                Text("Opacity")
+                            },
+                                   minimumValueLabel: {
+                                Text("-100.0")
+                            },
+                                   maximumValueLabel: {
+                                Text("100.0")
+                            })
+                            .padding()
+                        }
+                        HStack{
+                            Stepper("",
+                                    value: $selectedPercent,
+                                    in: -100.0...100.0,
+                                    step: 0.1)
+                            .padding(.trailing, 150)
+                        }
+                        
                     }
                     
                     Group {
                         HStack{
                             Spacer()
-                            Text("Investment")
+                            Text("Return")
                                 .font(.headline.smallCaps())
                             Spacer()
                         }
@@ -171,133 +237,80 @@ struct CalculatorView: View {
                             Spacer()
                             Text("$")
                             
-                            Text(totalInvestmentFormatted)
+                            Text(totalReturnFormatted)
                             
                             Spacer()
                         }
                     }
-                }
-                
-                Group {
+                    Group {
+                        HStack{
+                            Spacer()
+                            Text("Profit")
+                                .font(.headline.smallCaps())
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        HStack{
+                            Spacer()
+                            Text("$")
+                            
+                            Text(totalProfitFormatted)
+                            
+                            Spacer()
+                        }
+                    }
+                    //                Group{
+                    //
+                    //                    Stepper("precision", value:$desiredPrecision, in: 0...6)
+                    //                        .font(.title2)
+                    //                        .bold()
+                    //                        .padding()
+                    //                }
                     
-                    HStack {
-                        Spacer()
-                        Text("Gain / Loss")
-                        Spacer()
-                    }
-                    .font(.headline.smallCaps())
-                    .padding(.horizontal)
-                    HStack {
-                        Spacer()
-                        Text("%")
-                        Text("\(selectedPercent.formatted(.number.precision(.fractionLength(Int(1)))))")
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    HStack{
-                        Slider(value: $selectedPercent,
-                               in: -100.0...100.0,
-                               label: {
-                            Text("Opacity")
-                        },
-                               minimumValueLabel: {
-                            Text("-100.0")
-                        },
-                               maximumValueLabel: {
-                            Text("100.0")
-                        })
-                        .padding()
-                    }
-                    HStack{
-                        Stepper("",
-                                value: $selectedPercent,
-                                in: -100.0...100.0,
-                                step: 1.0)
-                        .padding(.trailing, 150)
-                    }
-                    
-                }
-                
-                Group {
-                    HStack{
-                        Spacer()
-                        Text("Return")
+                    Button(action: {
+                        guard let price = stockPrice else {
+                            return
+                        }
+                        let priceFormatted = String ( price.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))
+                        
+                        let percent = String(selectedPercent)
+                        
+                        let quantity = String(Quantity)
+                        
+                        let priorResult = Result(buyStockPrice: priceFormatted,
+                                                 Quantity: quantity,
+                                                 selectedPercent: percent,
+                                                 Return: totalReturnFormatted,
+                                                 Profit: totalProfitFormatted)
+                        
+                        history.append(priorResult)
+                        
+                    }, label: {
+                        Text("Save")
                             .font(.headline.smallCaps())
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    HStack{
-                        Spacer()
-                        Text("$")
-                        
-                        Text(totalReturnFormatted)
-                        
-                        Spacer()
-                    }
-                }
-                Group {
-                    HStack{
-                        Spacer()
-                        Text("Profit")
-                            .font(.headline.smallCaps())
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    HStack{
-                        Spacer()
-                        Text("$")
-                        
-                        Text(totalProfitFormatted)
-                        
-                        Spacer()
-                    }
-                }
-                Group{
+                    })
+                    .buttonStyle(.bordered)
                     
-                    Stepper("precision", value:$desiredPrecision, in: 0...6)
-                        .font(.title2)
-                        .bold()
+                    Spacer()
                         .padding()
                 }
-                
-                Button(action: {
-                    
-                    // Create a string version of the bill amount
-                    guard let price = stockPrice else {
-                        return
-                    }
-                    let priceFormatted = String ( price.formatted(.number.precision(.fractionLength(2))))
-                    
-                    let percent = String(selectedPercent)
-                    
-                    
-                    let quantity = String(Quantity)
-                    
-                    
-                    let priorResult = Result(buyStockPrice: priceFormatted,
-                                             Quantity: quantity,
-                                             selectedPercent: percent,
-                                             Return: totalReturnFormatted,
-                                             Profit: totalProfitFormatted)
-                    
-                    history.append(priorResult)
-                    
-                }, label: {
-                    Text("Save")
-                        .font(.headline.smallCaps())
-                })
-                .buttonStyle(.bordered)
-                
-                Spacer()
             }
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.yellow, .green]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all))
         }
-        .navigationTitle("Broker Calculator")
+        
+        .navigationTitle("Stock Calculator")
     }
 }
+
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
+        
         NavigationView {
+            
             CalculatorView(history: Binding.constant(historyForPreviews))
+            
         }
     }
 }
