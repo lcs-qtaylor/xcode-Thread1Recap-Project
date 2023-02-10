@@ -18,5 +18,5 @@ let id = UUID()
 }
 
 var exampleOneResultForPreviews = Result(buyStockPrice: "100.0", Quantity: "2.0", selectedPercent: "100.0", Return: "400.0", Profit: "200.0")
-var exampleTwoResultForPreviews = Result(buyStockPrice: "1000.0", Quantity: "200.0", selectedPercent: "1000.0", Return: "2000000.0", Profit: "1800000.0")
+var exampleTwoResultForPreviews = Result(buyStockPrice: "200.0", Quantity: "20.0", selectedPercent: "100.0", Return: "8000.0", Profit: "7600.0")
 var historyForPreviews = [exampleOneResultForPreviews ,exampleTwoResultForPreviews]

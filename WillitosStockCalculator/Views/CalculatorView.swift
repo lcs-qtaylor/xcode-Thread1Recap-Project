@@ -115,7 +115,7 @@ struct CalculatorView: View {
                                 Text("Price")
                                 Text("$")
                                 
-                                TextField("0.0", text: $buyStockPrice)
+                                TextField("0.00", text: $buyStockPrice)
                                 
                             }
                             .font(.largeTitle)
@@ -168,8 +168,8 @@ struct CalculatorView: View {
                                     .padding(.trailing, 150)
                                     
                                     Button(action: {
-                                     
-                                    
+                                        
+                                        
                                     }, label: {
                                         Image(systemName: "")
                                     })
@@ -210,6 +210,7 @@ struct CalculatorView: View {
                                     
                                     
                                     
+                                    //                                    Text("\(selectedPercent.formatted(.number.precision(.integerLength(Int(desiredPrecision)))))\(selectedPercent.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                                     Text("\(selectedPercent.formatted(.number.precision(.fractionLength(1))))")
                                     Text("%")
                                     Spacer()
@@ -275,7 +276,15 @@ struct CalculatorView: View {
                             Spacer()
                         }
                     }
-                    
+//                    HStack{
+//                        Group{
+//
+//                            Stepper("precision", value:$desiredPrecision, in: 0...6)
+//                                .font(.title2)
+//                                .bold()
+//                                .padding()
+//                        }
+//                    }
                     HStack{
                         Button(action: {
                             selectedPercent = 0.0
@@ -289,7 +298,7 @@ struct CalculatorView: View {
                             guard let price = stockPrice else {
                                 return
                             }
-                            let priceFormatted = String ( price.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))
+                            let priceFormatted = String ( price.formatted(.number.precision(.fractionLength(2))))
                             
                             let percent = String(selectedPercent)
                             
@@ -305,9 +314,9 @@ struct CalculatorView: View {
                             
                         }, label: {
                             Text("Save")
-                                
+                            
                         })
-                       
+                        
                         
                         .padding()
                     }
